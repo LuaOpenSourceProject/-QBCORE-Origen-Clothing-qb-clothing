@@ -1,0 +1,1912 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
+    <link rel="stylesheet" href="./reset.css">
+    <link rel="stylesheet" href="./style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link href="https://cdn.lineicons.com/4.0/lineicons.css" rel="stylesheet">
+
+
+    <title>Origen Clothing</title>
+</head>
+
+<body>
+   
+    <div class="container">
+       
+        
+        <div class="clothing-menu-container">
+            <div class="footer">
+                <div class="control">
+                    <div class="footer-bg"></div>
+
+                    <svg viewBox="0 0 14.334 24.75">
+                        <circle
+                            class="circle-1"
+                            fill="white"
+                            cx="7.167"
+                            cy="6"
+                            r="1.2"
+                        />
+                        <circle
+                            class="circle-2"
+                            fill="white"
+                            cx="7.167"
+                            cy="6"
+                            r="1.2"
+                        />
+                        <path
+                            stroke="white"
+                            fill="transparent"
+                            d="M7.167,0.5C3.485,0.5,0.5,3.485,0.5,7.167v10.416                   c0,3.682,2.985,6.667,6.667,6.667s6.667-2.985,6.667-6.667V7.167C13.834,3.485,10.849,0.5,7.167,0.5z"
+                        />
+                    </svg>
+                    <div class="accion">Rotar personaje</div>
+                </div>
+                
+            </div>
+            <div class="clothing-menu-header">
+                <!-- <div class="clothing-menu-header-btn characterTab selected" data-category="character"><p>Karakter</p></div>
+                <div class="clothing-menu-header-btn clothingTab" data-category="clothing"><p>Uiterlijk</p></div>
+                <div class="clothing-menu-header-btn accessoiresTab" data-category="accessoires"><p>Accessoires</p></div> -->
+            </div>
+            <div class="clothing-menu-header-cameras">
+               
+                <div class="clothing-menu-header-camera-btn" data-value="1"><i class="lni lni-user"></i></div>
+                <div class="clothing-menu-header-camera-btn" data-value="2"><i class="lni lni-t-shirt"></i></div>
+                <div class="clothing-menu-header-camera-btn" data-value="3"><i class="fa fa-socks"></i></div>
+            </div>
+           
+
+            <div class="clothing-menu-character-container">
+                <!-- <div class="clothing-menu-option" data-type="model">
+                    <div class="clothing-menu-option-header"><p>Player Model</p></div>
+                    <div class="clothing-menu-option-item">
+                        <div class="clothing-menu-option-item-header"><p>Model:</p></div>
+                        <div class="clothing-menu-option-item-left" id="model-left" data-type="item"><i class="fa fa-angle-left"></i></div> 
+                        <input type="number" class="item-number" data-type="item" value="1">
+                        <div class="clothing-menu-option-item-right" id="model-right" data-type="item"><i class="fa fa-angle-right"></i></div>
+                    </div>
+                    <div class="clothing-menu-option-item">
+                        <div class="clothing-menu-option-item-header" id="current-model"><p>mp_m_freemode_01</p></div>
+                    </div>
+                </div> -->
+                <div class="flex">
+                    <div class="clothing-menu-option" data-type="arms" >
+                        <img src="https://i.imgur.com/3OHE6Rb.png" class="icon">
+                        <div class="clothing-menu-option-header"><p> Brazos</p></div>
+                        <div class="clothing-menu-option-item">
+                            <div class="clothing-menu-option-item-header" data-headertype="item-header"><p>Tipos</p></div>
+                            <div class="clothing-menu-option-item-left" data-type="item"><i class="fa fa-angle-left"></i></div> 
+                            <input type="number" class="item-number" data-type="item" value="0">
+                            <div class="clothing-menu-option-item-right" data-type="item"><i class="fa fa-angle-right"></i></div>
+                        </div>
+                        <div class="clothing-menu-option-item">
+                            <div class="clothing-menu-option-item-header" data-headertype="texture-header"><p>Texturas</p></div>
+                            <div class="clothing-menu-option-item-left" data-type="texture"><i class="fa fa-angle-left"></i></div>
+                            <input type="number" class="item-number" data-type="texture" min="0" value="0">
+                            <div class="clothing-menu-option-item-right" data-type="texture"><i class="fa fa-angle-right"></i></div>
+                        </div>
+                    </div>
+                    <div class="clothing-menu-option" data-type="t-shirt">
+                        <img src="https://i.imgur.com/mOffwA8.png" class="icon">
+    
+                        <div class="clothing-menu-option-header"><p>Camisetas</p></div>
+                        <div class="clothing-menu-option-item">
+                            <div class="clothing-menu-option-item-header" data-headertype="item-header"><p>Elementos</p></div>
+                            <div class="clothing-menu-option-item-left" data-type="item"><i class="fa fa-angle-left"></i></div> 
+                            <input type="number" class="item-number" data-type="item" value="0">
+                            <div class="clothing-menu-option-item-right" data-type="item"><i class="fa fa-angle-right"></i></div>
+                        </div>
+                        <div class="clothing-menu-option-item">
+                            <div class="clothing-menu-option-item-header" data-headertype="texture-header"><p>Colores</p></div>
+                            <div class="clothing-menu-option-item-left" data-type="texture"><i class="fa fa-angle-left"></i></div>
+                            <input type="number" class="item-number" data-type="texture" min="0" value="0">
+                            <div class="clothing-menu-option-item-right" data-type="texture"><i class="fa fa-angle-right"></i></div>
+                        </div>
+                    </div>
+                    <div class="clothing-menu-option" data-type="torso2">
+                        <img src="https://i.imgur.com/e3NyJu5.png" class="icon">
+    
+                        <div class="clothing-menu-option-header"><p>Chaquetas</p></div>
+                        <div class="clothing-menu-option-item">
+                            <div class="clothing-menu-option-item-header" data-headertype="item-header"><p>Elementos</p></div>
+                            <div class="clothing-menu-option-item-left" data-type="item"><i class="fa fa-angle-left"></i></div> 
+                            <input type="number" class="item-number" data-type="item" min="0" value="0">
+                            <div class="clothing-menu-option-item-right" data-type="item"><i class="fa fa-angle-right"></i></div>
+                        </div>
+                        <div class="clothing-menu-option-item">
+                            <div class="clothing-menu-option-item-header" data-headertype="texture-header"><p>Colores</p></div>
+                            <div class="clothing-menu-option-item-left" data-type="texture"><i class="fa fa-angle-left"></i></div>
+                            <input type="number" class="item-number" data-type="texture" min="0" value="0">
+                            <div class="clothing-menu-option-item-right" data-type="texture"><i class="fa fa-angle-right"></i></div>
+                        </div>
+                    </div>
+                    <div class="clothing-menu-option" data-type="vest">
+                        <img src="https://i.imgur.com/ydiXwPu.png" class="icon">
+    
+                        <div class="clothing-menu-option-header"><p>Accesorios Torso</p></div>
+                        <div class="clothing-menu-option-item">
+                            <div class="clothing-menu-option-item-header" data-headertype="item-header"><p>Elementos</p></div>
+                            <div class="clothing-menu-option-item-left" data-type="item"><i class="fa fa-angle-left"></i></div> 
+                            <input type="number" class="item-number" data-type="item" min="0" value="0">
+                            <div class="clothing-menu-option-item-right" data-type="item"><i class="fa fa-angle-right"></i></div>
+                        </div>
+                        <div class="clothing-menu-option-item">
+                            <div class="clothing-menu-option-item-header" data-headertype="texture-header"><p>Texturas</p></div>
+                            <div class="clothing-menu-option-item-left" data-type="texture"><i class="fa fa-angle-left"></i></div>
+                            <input type="number" class="item-number" data-type="texture" min="0" value="0">
+                            <div class="clothing-menu-option-item-right" data-type="texture"><i class="fa fa-angle-right"></i></div>
+                        </div>
+                    </div>
+                    <div class="clothing-menu-option" data-type="decals">
+                        <img src="https://i.imgur.com/FPlLDVz.png" class="icon">
+    
+                        <div class="clothing-menu-option-header"><p>Calcomanías</p></div>
+                        <div class="clothing-menu-option-item">
+                            <div class="clothing-menu-option-item-header" data-headertype="item-header"><p>Elementos</p></div>
+                            <div class="clothing-menu-option-item-left" data-type="item"><i class="fa fa-angle-left"></i></div> 
+                            <input type="number" class="item-number" data-type="item" min="0" value="0">
+                            <div class="clothing-menu-option-item-right" data-type="item"><i class="fa fa-angle-right"></i></div>
+                        </div>
+                        <div class="clothing-menu-option-item">
+                            <div class="clothing-menu-option-item-header" data-headertype="texture-header"><p>Texturas</p></div>
+                            <div class="clothing-menu-option-item-left" data-type="texture"><i class="fa fa-angle-left"></i></div>
+                            <input type="number" class="item-number" data-type="texture" min="0" value="0">
+                            <div class="clothing-menu-option-item-right" data-type="texture"><i class="fa fa-angle-right"></i></div>
+                        </div>
+                    </div>
+                    <div class="clothing-menu-option" data-type="accessory">
+                        <img src="https://i.imgur.com/kABKHQD.png" class="icon">
+    
+                        <div class="clothing-menu-option-header"><p>Accesorios Cuello</p></div>
+                        <div class="clothing-menu-option-item">
+                            <div class="clothing-menu-option-item-header" data-headertype="item-header"><p>Numero</p></div>
+                            <div class="clothing-menu-option-item-left" data-type="item"><i class="fa fa-angle-left"></i></div> 
+                            <input type="number" class="item-number" data-type="item" min="0" value="0">
+                            <div class="clothing-menu-option-item-right" data-type="item"><i class="fa fa-angle-right"></i></div>
+                        </div>
+                        <div class="clothing-menu-option-item">
+                            <div class="clothing-menu-option-item-header" data-headertype="texture-header"><p>Textura</p></div>
+                            <div class="clothing-menu-option-item-left" data-type="texture"><i class="fa fa-angle-left"></i></div>
+                            <input type="number" class="item-number" data-type="texture" min="0" value="0">
+                            <div class="clothing-menu-option-item-right" data-type="texture"><i class="fa fa-angle-right"></i></div>
+                        </div>
+                    </div>
+                    <div class="clothing-menu-option" data-type="bag">
+                        <img src="https://i.imgur.com/wPwaneI.png" class="icon">
+    
+                        <div class="clothing-menu-option-header"><p>Bolsas/Mochilas</p></div>
+                        <div class="clothing-menu-option-item">
+                            <div class="clothing-menu-option-item-header" data-headertype="item-header"><p>Numero</p></div>
+                            <div class="clothing-menu-option-item-left" data-type="item"><i class="fa fa-angle-left"></i></div> 
+                            <input type="number" class="item-number" data-type="item" min="0" value="0">
+                            <div class="clothing-menu-option-item-right" data-type="item"><i class="fa fa-angle-right"></i></div>
+                        </div>
+                        <div class="clothing-menu-option-item">
+                            <div class="clothing-menu-option-item-header" data-headertype="texture-header"><p>Textura</p></div>
+                            <div class="clothing-menu-option-item-left" data-type="texture"><i class="fa fa-angle-left"></i></div>
+                            <input type="number" class="item-number" data-type="texture" min="0" value="0">
+                            <div class="clothing-menu-option-item-right" data-type="texture"><i class="fa fa-angle-right"></i></div>
+                        </div>
+                    </div>
+                    <div class="clothing-menu-option" data-type="pants">
+                        <img src="https://i.imgur.com/mAH3Yt9.png" class="icon">
+    
+                        <div class="clothing-menu-option-header"><p>Pantalones</p></div>
+                        <div class="clothing-menu-option-item">
+                            <div class="clothing-menu-option-item-header" data-headertype="item-header"><p>Numero</p></div>
+                            <div class="clothing-menu-option-item-left" data-type="item"><i class="fa fa-angle-left"></i></div> 
+                            <input type="number" class="item-number" data-type="item" min="0" value="0">
+                            <div class="clothing-menu-option-item-right" data-type="item"><i class="fa fa-angle-right"></i></div>
+                        </div>
+                        <div class="clothing-menu-option-item">
+                            <div class="clothing-menu-option-item-header" data-headertype="texture-header"><p>Textura</p></div>
+                            <div class="clothing-menu-option-item-left" data-type="texture"><i class="fa fa-angle-left"></i></div>
+                            <input type="number" class="item-number" data-type="texture" min="0" value="0">
+                            <div class="clothing-menu-option-item-right" data-type="texture"><i class="fa fa-angle-right"></i></div>
+                        </div>
+                    </div>
+                    <div class="clothing-menu-option" data-type="shoes">
+                        <img src="https://i.imgur.com/fzwS7TJ.png" class="icon">
+    
+                        <div class="clothing-menu-option-header"><p>Zapatos</p></div>
+                        <div class="clothing-menu-option-item">
+                            <div class="clothing-menu-option-item-header" data-headertype="item-header"><p>Numero</p></div>
+                            <div class="clothing-menu-option-item-left" data-type="item"><i class="fa fa-angle-left"></i></div> 
+                            <input type="number" class="item-number" data-type="item" min="0" value="0">
+                            <div class="clothing-menu-option-item-right" data-type="item"><i class="fa fa-angle-right"></i></div>
+                        </div>
+                        <div class="clothing-menu-option-item">
+                            <div class="clothing-menu-option-item-header" data-headertype="texture-header"><p>Textura</p></div>
+                            <div class="clothing-menu-option-item-left" data-type="texture"><i class="fa fa-angle-left"></i></div>
+                            <input type="number" class="item-number" data-type="texture" min="0" value="0">
+                            <div class="clothing-menu-option-item-right" data-type="texture"><i class="fa fa-angle-right"></i></div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="clothing-menu-clothing-container">
+                <div class="flex">
+                    <div class="clothing-menu-option zona-cara" data-type="mom">
+                        <div class="clothing-menu-option-header"><p>Cara de la madre</p></div>
+                        <div class="clothing-menu-option-item">
+                            <div class="clothing-menu-option-item-header" data-headertype="item-header"><p>Tipos</p></div>
+                            <div class="clothing-menu-option-item-left" data-type="item"><i class="fa fa-angle-left"></i></div> 
+                            <input type="number" class="item-number" data-type="item" min="0" value="0">
+                            <div class="clothing-menu-option-item-right" data-type="item"><i class="fa fa-angle-right"></i></div>
+                        </div>
+                    </div>
+                    <div class="clothing-menu-option zona-cara" data-type="dad">
+                        <div class="clothing-menu-option-header"><p>Cara del padre</p></div>
+                        <div class="clothing-menu-option-item">
+                            <div class="clothing-menu-option-item-header" data-headertype="item-header"><p>Tipos</p></div>
+                            <div class="clothing-menu-option-item-left" data-type="item"><i class="fa fa-angle-left"></i></div> 
+                            <input type="number" class="item-number" data-type="item" min="0" value="0">
+                            <div class="clothing-menu-option-item-right" data-type="item"><i class="fa fa-angle-right"></i></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="clothing-menu-option zona-cara" data-type="face_md_weight">
+                    <div class="clothing-menu-option-header"><p>Similitud entre forma de madre y padre</p></div>
+                    <!-- <div class="clothing-menu-option-item">
+                        <div class="clothing-menu-option-item-header" data-headertype="item-header"><p>Tipos</p></div>
+                        <div class="clothing-menu-option-item-left" data-type="item"><i class="fa fa-angle-left"></i></div> 
+                        <input type="number" class="item-number" data-type="item" value="0">
+                        <div class="clothing-menu-option-item-right" data-type="item"><i class="fa fa-angle-right"></i></div>
+                    </div> -->
+                    <div class="rangevalue"><p>0</p></div>
+                    <input type="range" oninput="sliderselector(this)" class="sliderselector" data-type="item" min="0" max="100">
+                </div>
+                <div class="flex">
+                    <div class="clothing-menu-option zona-cara" data-type="mom_skin">
+                        <div class="clothing-menu-option-header"><p>Color de la madre</p></div>
+                        <div class="clothing-menu-option-item">
+                            <div class="clothing-menu-option-item-header" data-headertype="item-header"><p>Tipos</p></div>
+                            <div class="clothing-menu-option-item-left" data-type="item"><i class="fa fa-angle-left"></i></div> 
+                            <input type="number" class="item-number" data-type="item" min="0" value="0">
+                            <div class="clothing-menu-option-item-right" data-type="item"><i class="fa fa-angle-right"></i></div>
+                        </div>
+                    </div>
+                    <div class="clothing-menu-option zona-cara" data-type="dad_skin">
+                        <div class="clothing-menu-option-header"><p>Color del padre</p></div>
+                        <div class="clothing-menu-option-item">
+                            <div class="clothing-menu-option-item-header" data-headertype="item-header"><p>Tipos</p></div>
+                            <div class="clothing-menu-option-item-left" data-type="item"><i class="fa fa-angle-left"></i></div> 
+                            <input type="number" class="item-number" data-type="item" min="0" value="0">
+                            <div class="clothing-menu-option-item-right" data-type="item"><i class="fa fa-angle-right"></i></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="clothing-menu-option zona-cara" data-type="skin_md_weight">
+                    <div class="clothing-menu-option-header"><p>Similitud entre color de madre y padre</p></div>
+                    <!-- <div class="clothing-menu-option-item">
+                        <div class="clothing-menu-option-item-header" data-headertype="item-header"><p>Tipos</p></div>
+                        <div class="clothing-menu-option-item-left" data-type="item"><i class="fa fa-angle-left"></i></div> 
+                        <input type="number" class="item-number" data-type="item" value="0">
+                        <div class="clothing-menu-option-item-right" data-type="item"><i class="fa fa-angle-right"></i></div>
+                    </div> -->
+                    <div class="rangevalue"><p>0</p></div>
+                    <input type="range" oninput="sliderselector(this)" class="sliderselector" data-type="item" min="0" max="100">
+                </div>
+                <div class="clothing-menu-option" data-type="eye_color" id="z_ojos">
+                    <div class="clothing-menu-option-header"><p>Color Ojos</p></div>
+                    <div class="clothing-menu-option-item">
+                        <div class="clothing-menu-option-item-header" data-headertype="item-header"><p>Color</p></div>
+                        <div class="clothing-menu-option-item-left" data-type="item"><i class="fa fa-angle-left"></i></div> 
+                        <input type="number" class="item-number" data-type="item" value="0">
+                        <div class="clothing-menu-option-item-right" data-type="item"><i class="fa fa-angle-right"></i></div>
+                    </div>
+                    <!-- <div class="clothing-menu-option-item">
+                        <div class="clothing-menu-option-item-header" data-headertype="texture-header"><p>Color</p></div>
+                        <div class="clothing-menu-option-item-left" data-type="texture"><i class="fa fa-angle-left"></i></div>
+                        <input type="number" class="item-number" data-type="texture" value="0">
+                        <div class="clothing-menu-option-item-right" data-type="texture"><i class="fa fa-angle-right"></i></div>
+                    </div> -->
+                </div>
+                <div class="clothing-menu-option" data-type="moles" id="pecas">
+                    <div class="clothing-menu-option-header"><p>Lunares/Pecas</p></div>
+                    <div class="clothing-menu-option-item">
+                        <div class="clothing-menu-option-item-header" data-headertype="item-header"><p>Tipo</p></div>
+                        <div class="clothing-menu-option-item-left" data-type="item"><i class="fa fa-angle-left"></i></div> 
+                        <input type="number" class="item-number allow-negative" data-type="item" value="-1">
+                        <div class="clothing-menu-option-item-right" data-type="item"><i class="fa fa-angle-right"></i></div>
+                    </div>
+                    <!-- <div class="clothing-menu-option-item">
+                        <div class="clothing-menu-option-item-header" data-headertype="texture-header"><p>Opacidad</p></div>
+                        <div class="clothing-menu-option-item-left" data-type="texture"><i class="fa fa-angle-left"></i></div>
+                        <input type="number" class="item-number" data-type="texture" value="0">
+                        <div class="clothing-menu-option-item-right" data-type="texture"><i class="fa fa-angle-right"></i></div>
+                    </div> -->
+                    <div class="rangevalue"><p>0</p></div>
+                    <input type="range" oninput="sliderselector(this)" class="sliderselector" data-type="texture" min="0" max="100">
+                </div>
+                <div class="clothing-menu-option" data-type="body_blemishes">
+                    <div class="clothing-menu-option-header"><p>Imperfecciones del cuerpo</p></div>
+                    <div class="clothing-menu-option-item">
+                        <div class="clothing-menu-option-item-header" data-headertype="item-header"><p>Tipo</p></div>
+                        <div class="clothing-menu-option-item-left" data-type="item"><i class="fa fa-angle-left"></i></div> 
+                        <input type="number" class="item-number" data-type="item" value="0">
+                        <div class="clothing-menu-option-item-right" data-type="item"><i class="fa fa-angle-right"></i></div>
+                    </div>
+                    <!-- <div class="clothing-menu-option-item">
+                        <div class="clothing-menu-option-item-header" data-headertype="texture-header"><p>Color</p></div>
+                        <div class="clothing-menu-option-item-left" data-type="texture"><i class="fa fa-angle-left"></i></div>
+                        <input type="number" class="item-number" data-type="texture" value="0">
+                        <div class="clothing-menu-option-item-right" data-type="texture"><i class="fa fa-angle-right"></i></div>
+                    </div> -->
+                    <div class="rangevalue"><p>0</p></div>
+                    <input type="range" oninput="sliderselector(this)" class="sliderselector" data-type="opacity" min="0" max="100">
+                </div>
+                <div class="clothing-menu-option" data-type="sundamage">
+                    <div class="clothing-menu-option-header"><p>Cicatrices</div>
+                    <div class="clothing-menu-option-item">
+                        <div class="clothing-menu-option-item-header" data-headertype="item-header"><p>Tipo</p></div>
+                        <div class="clothing-menu-option-item-left" data-type="item"><i class="fa fa-angle-left"></i></div> 
+                        <input type="number" class="item-number" data-type="item" value="0">
+                        <div class="clothing-menu-option-item-right" data-type="item"><i class="fa fa-angle-right"></i></div>
+                    </div>
+                    <!-- <div class="clothing-menu-option-item">
+                        <div class="clothing-menu-option-item-header" data-headertype="texture-header"><p>Color</p></div>
+                        <div class="clothing-menu-option-item-left" data-type="texture"><i class="fa fa-angle-left"></i></div>
+                        <input type="number" class="item-number" data-type="texture" value="0">
+                        <div class="clothing-menu-option-item-right" data-type="texture"><i class="fa fa-angle-right"></i></div>
+                    </div> -->
+                    <div class="rangevalue"><p>0</p></div>
+                    <input type="range" oninput="sliderselector(this)" class="sliderselector" data-type="opacity" min="0" max="100">
+                </div>
+                <div class="clothing-menu-option" data-type="complexion">
+                    <div class="clothing-menu-option-header"><p>Tez</p></div>
+                    <div class="clothing-menu-option-item">
+                        <div class="clothing-menu-option-item-header" data-headertype="item-header"><p>Tipo</p></div>
+                        <div class="clothing-menu-option-item-left" data-type="item"><i class="fa fa-angle-left"></i></div> 
+                        <input type="number" class="item-number" data-type="item" value="0">
+                        <div class="clothing-menu-option-item-right" data-type="item"><i class="fa fa-angle-right"></i></div>
+                    </div>
+                    <!-- <div class="clothing-menu-option-item">
+                        <div class="clothing-menu-option-item-header" data-headertype="texture-header"><p>Color</p></div>
+                        <div class="clothing-menu-option-item-left" data-type="texture"><i class="fa fa-angle-left"></i></div>
+                        <input type="number" class="item-number" data-type="texture" value="0">
+                        <div class="clothing-menu-option-item-right" data-type="texture"><i class="fa fa-angle-right"></i></div>
+                    </div> -->
+                    <div class="rangevalue"><p>0</p></div>
+                    <input type="range" oninput="sliderselector(this)" class="sliderselector" data-type="opacity" min="0" max="100">
+                </div>
+                <div class="flex">
+                    <div class="clothing-menu-option" data-type="nose_0" id="nariz">
+                        <div class="clothing-menu-option-header"><p>Ancho de la nariz</p></div>
+                        <div class="clothing-menu-option-item">
+                            <div class="clothing-menu-option-item-header" data-headertype="item-header"><p>Ancho</p></div>
+                            <div class="clothing-menu-option-item-left" data-type="item"><i class="fa fa-angle-left"></i></div> 
+                            <input type="number" class="item-number allow-negative-face" data-type="item" value="0">
+                            <div class="clothing-menu-option-item-right" data-type="item"><i class="fa fa-angle-right"></i></div>
+                        </div>
+                        <!-- <div class="clothing-menu-option-item">
+                            <div class="clothing-menu-option-item-header" data-headertype="texture-header"><p>Width</p></div>
+                            <div class="clothing-menu-option-item-left" data-type="texture"><i class="fa fa-angle-left"></i></div>
+                            <input type="number" class="item-number" data-type="texture" value="0">
+                            <div class="clothing-menu-option-item-right" data-type="texture"><i class="fa fa-angle-right"></i></div>
+                        </div> -->
+                    </div>
+                    <div class="clothing-menu-option" data-type="nose_1" id="altura-nariz">
+                        <div class="clothing-menu-option-header"><p>Altura nariz</p></div>
+                        <div class="clothing-menu-option-item">
+                            <div class="clothing-menu-option-item-header" data-headertype="item-header"><p>Altura</p></div>
+                            <div class="clothing-menu-option-item-left" data-type="item"><i class="fa fa-angle-left"></i></div> 
+                            <input type="number" class="item-number allow-negative-face" data-type="item" value="0">
+                            <div class="clothing-menu-option-item-right" data-type="item"><i class="fa fa-angle-right"></i></div>
+                        </div>
+                        <!-- <div class="clothing-menu-option-item">
+                            <div class="clothing-menu-option-item-header" data-headertype="texture-header"><p>Hight</p></div>
+                            <div class="clothing-menu-option-item-left" data-type="texture"><i class="fa fa-angle-left"></i></div>
+                            <input type="number" class="item-number" data-type="texture" value="0">
+                            <div class="clothing-menu-option-item-right" data-type="texture"><i class="fa fa-angle-right"></i></div>
+                        </div> -->
+                    </div>
+                    <div class="clothing-menu-option" data-type="nose_2" id="long-nariz">
+                        <div class="clothing-menu-option-header"><p>Longitud Nariz</p></div>
+                        <div class="clothing-menu-option-item">
+                            <div class="clothing-menu-option-item-header" data-headertype="item-header"><p>Longitud</p></div>
+                            <div class="clothing-menu-option-item-left" data-type="item"><i class="fa fa-angle-left"></i></div> 
+                            <input type="number" class="item-number allow-negative-face" data-type="item" value="0">
+                            <div class="clothing-menu-option-item-right" data-type="item"><i class="fa fa-angle-right"></i></div>
+                        </div>
+                        <!-- <div class="clothing-menu-option-item">
+                            <div class="clothing-menu-option-item-header" data-headertype="texture-header"><p>Length</p></div>
+                            <div class="clothing-menu-option-item-left" data-type="texture"><i class="fa fa-angle-left"></i></div>
+                            <input type="number" class="item-number" data-type="texture" value="0">
+                            <div class="clothing-menu-option-item-right" data-type="texture"><i class="fa fa-angle-right"></i></div>
+                        </div> -->
+                    </div>
+                    <div class="clothing-menu-option" data-type="nose_3" id="alt-hueso-nariz">
+                        <div class="clothing-menu-option-header"><p>Altura hueso nariz</p></div>
+                        <div class="clothing-menu-option-item">
+                            <div class="clothing-menu-option-item-header" data-headertype="item-header"><p>Altura</p></div>
+                            <div class="clothing-menu-option-item-left" data-type="item"><i class="fa fa-angle-left"></i></div> 
+                            <input type="number" class="item-number allow-negative-face" data-type="item" value="0">
+                            <div class="clothing-menu-option-item-right" data-type="item"><i class="fa fa-angle-right"></i></div>
+                        </div>
+                        <!-- <div class="clothing-menu-option-item">
+                            <div class="clothing-menu-option-item-header" data-headertype="texture-header"><p>Height</p></div>
+                            <div class="clothing-menu-option-item-left" data-type="texture"><i class="fa fa-angle-left"></i></div>
+                            <input type="number" class="item-number" data-type="texture" value="0">
+                            <div class="clothing-menu-option-item-right" data-type="texture"><i class="fa fa-angle-right"></i></div>
+                        </div> -->
+                    </div>
+                    <div class="clothing-menu-option" data-type="nose_4" id="pico-nariz">
+                        <div class="clothing-menu-option-header"><p>Bajar Pico Nariz</p></div>
+                        <div class="clothing-menu-option-item">
+                            <div class="clothing-menu-option-item-header" data-headertype="item-header"><p>Bajar</p></div>
+                            <div class="clothing-menu-option-item-left" data-type="item"><i class="fa fa-angle-left"></i></div> 
+                            <input type="number" class="item-number allow-negative-face" data-type="item" value="0">
+                            <div class="clothing-menu-option-item-right" data-type="item"><i class="fa fa-angle-right"></i></div>
+                        </div>
+                        <!-- <div class="clothing-menu-option-item">
+                            <div class="clothing-menu-option-item-header" data-headertype="texture-header"><p>Lowering</p></div>
+                            <div class="clothing-menu-option-item-left" data-type="texture"><i class="fa fa-angle-left"></i></div>
+                            <input type="number" class="item-number" data-type="texture" value="0">
+                            <div class="clothing-menu-option-item-right" data-type="texture"><i class="fa fa-angle-right"></i></div>
+                        </div> -->
+                    </div>
+                    <div class="clothing-menu-option" data-type="nose_5" id="g-pico-nariz">
+                        <div class="clothing-menu-option-header"><p>Girar pico nariz</p></div>
+                        <div class="clothing-menu-option-item">
+                            <div class="clothing-menu-option-item-header" data-headertype="item-header"><p>Girar</p></div>
+                            <div class="clothing-menu-option-item-left" data-type="item"><i class="fa fa-angle-left"></i></div> 
+                            <input type="number" class="item-number allow-negative-face" data-type="item" value="0">
+                            <div class="clothing-menu-option-item-right" data-type="item"><i class="fa fa-angle-right"></i></div>
+                        </div>
+                        <!-- <div class="clothing-menu-option-item">
+                            <div class="clothing-menu-option-item-header" data-headertype="texture-header"><p>Twist</p></div>
+                            <div class="clothing-menu-option-item-left" data-type="texture"><i class="fa fa-angle-left"></i></div>
+                            <input type="number" class="item-number" data-type="texture" value="0">
+                            <div class="clothing-menu-option-item-right" data-type="texture"><i class="fa fa-angle-right"></i></div>
+                        </div> -->
+                    </div>
+                    <div class="clothing-menu-option" data-type="eyebrown_high">
+                        <div class="clothing-menu-option-header"><p>Altura de las cejas</p></div>
+                        <div class="clothing-menu-option-item">
+                            <div class="clothing-menu-option-item-header" data-headertype="item-header"><p>Subir</p></div>
+                            <div class="clothing-menu-option-item-left" data-type="item"><i class="fa fa-angle-left"></i></div> 
+                            <input type="number" class="item-number allow-negative-face" data-type="item" value="0">
+                            <div class="clothing-menu-option-item-right" data-type="item"><i class="fa fa-angle-right"></i></div>
+                        </div>
+                        <!-- <div class="clothing-menu-option-item">
+                            <div class="clothing-menu-option-item-header" data-headertype="texture-header"><p>Height</p></div>
+                            <div class="clothing-menu-option-item-left" data-type="texture"><i class="fa fa-angle-left"></i></div>
+                            <input type="number" class="item-number" data-type="texture" value="0">
+                            <div class="clothing-menu-option-item-right" data-type="texture"><i class="fa fa-angle-right"></i></div>
+                        </div> -->
+                    </div>
+                    <div class="clothing-menu-option" data-type="eyebrown_forward">
+                        <div class="clothing-menu-option-header"><p>Pestañas</p></div>
+                        <div class="clothing-menu-option-item">
+                            <div class="clothing-menu-option-item-header" data-headertype="item-header"><p>Pestañas</p></div>
+                            <div class="clothing-menu-option-item-left" data-type="item"><i class="fa fa-angle-left"></i></div> 
+                            <input type="number" class="item-number allow-negative-face" data-type="item" value="0">
+                            <div class="clothing-menu-option-item-right" data-type="item"><i class="fa fa-angle-right"></i></div>
+                        </div>
+                        <!-- <div class="clothing-menu-option-item">
+                            <div class="clothing-menu-option-item-header" data-headertype="texture-header"><p>Forward</p></div>
+                            <div class="clothing-menu-option-item-left" data-type="texture"><i class="fa fa-angle-left"></i></div>
+                            <input type="number" class="item-number" data-type="texture" value="0">
+                            <div class="clothing-menu-option-item-right" data-type="texture"><i class="fa fa-angle-right"></i></div>
+                        </div> -->
+                    </div>
+                    <div class="clothing-menu-option" data-type="cheek_1" id="ancho-mandibula">
+                        <div class="clothing-menu-option-header"><p>Ancho Mandibula</p></div>
+                        <div class="clothing-menu-option-item">
+                            <div class="clothing-menu-option-item-header" data-headertype="item-header"><p>Ancho</p></div>
+                            <div class="clothing-menu-option-item-left" data-type="item"><i class="fa fa-angle-left"></i></div> 
+                            <input type="number" class="item-number allow-negative-face" data-type="item" value="0">
+                            <div class="clothing-menu-option-item-right" data-type="item"><i class="fa fa-angle-right"></i></div>
+                        </div>
+                        <!-- <div class="clothing-menu-option-item">
+                            <div class="clothing-menu-option-item-header" data-headertype="texture-header"><p>Width</p></div>
+                            <div class="clothing-menu-option-item-left" data-type="texture"><i class="fa fa-angle-left"></i></div>
+                            <input type="number" class="item-number" data-type="texture" value="0">
+                            <div class="clothing-menu-option-item-right" data-type="texture"><i class="fa fa-angle-right"></i></div>
+                        </div> -->
+                    </div>
+                    <div class="clothing-menu-option" data-type="cheek_2" id="long-mandibula">
+                        <div class="clothing-menu-option-header"><p>Longitud Mandibula</p></div>
+                        <div class="clothing-menu-option-item">
+                            <div class="clothing-menu-option-item-header" data-headertype="item-header"><p>Longitud</p></div>
+                            <div class="clothing-menu-option-item-left" data-type="item"><i class="fa fa-angle-left"></i></div> 
+                            <input type="number" class="item-number allow-negative-face" data-type="item" value="0">
+                            <div class="clothing-menu-option-item-right" data-type="item"><i class="fa fa-angle-right"></i></div>
+                        </div>
+                        <!-- <div class="clothing-menu-option-item">
+                            <div class="clothing-menu-option-item-header" data-headertype="texture-header"><p>Length</p></div>
+                            <div class="clothing-menu-option-item-left" data-type="texture"><i class="fa fa-angle-left"></i></div>
+                            <input type="number" class="item-number" data-type="texture" value="0">
+                            <div class="clothing-menu-option-item-right" data-type="texture"><i class="fa fa-angle-right"></i></div>
+                        </div> -->
+                    </div>
+                    <div class="clothing-menu-option" data-type="cheek_3" id="ancho-mejillas">
+                        <div class="clothing-menu-option-header"><p>Ancho del hueso</p></div>
+                        <div class="clothing-menu-option-item">
+                            <div class="clothing-menu-option-item-header" data-headertype="item-header"><p>Ancho</p></div>
+                            <div class="clothing-menu-option-item-left" data-type="item"><i class="fa fa-angle-left"></i></div> 
+                            <input type="number" class="item-number allow-negative-face" data-type="item" value="0">
+                            <div class="clothing-menu-option-item-right" data-type="item"><i class="fa fa-angle-right"></i></div>
+                        </div>
+                        <!-- <div class="clothing-menu-option-item">
+                            <div class="clothing-menu-option-item-header" data-headertype="texture-header"><p>Width</p></div>
+                            <div class="clothing-menu-option-item-left" data-type="texture"><i class="fa fa-angle-left"></i></div>
+                            <input type="number" class="item-number" data-type="texture" value="0">
+                            <div class="clothing-menu-option-item-right" data-type="texture"><i class="fa fa-angle-right"></i></div>
+                        </div> -->
+                    </div>
+                    <div class="clothing-menu-option" data-type="eye_opening" id="apertura-ojos">
+                        <div class="clothing-menu-option-header"><p>Ojos abiertos</p></div>
+                        <div class="clothing-menu-option-item">
+                            <div class="clothing-menu-option-item-header" data-headertype="item-header"><p>Apertura</p></div>
+                            <div class="clothing-menu-option-item-left" data-type="item"><i class="fa fa-angle-left"></i></div> 
+                            <input type="number" class="item-number allow-negative-face" data-type="item" value="0">
+                            <div class="clothing-menu-option-item-right" data-type="item"><i class="fa fa-angle-right"></i></div>
+                        </div>
+                        <!-- <div class="clothing-menu-option-item">
+                            <div class="clothing-menu-option-item-header" data-headertype="texture-header"><p>Opening</p></div>
+                            <div class="clothing-menu-option-item-left" data-type="texture"><i class="fa fa-angle-left"></i></div>
+                            <input type="number" class="item-number" data-type="texture" value="0">
+                            <div class="clothing-menu-option-item-right" data-type="texture"><i class="fa fa-angle-right"></i></div>
+                        </div> -->
+                    </div>
+                    <div class="clothing-menu-option" data-type="lips_thickness" id="anchura-labios">
+                        <div class="clothing-menu-option-header"><p>Espesor de labios</p></div>
+                        <div class="clothing-menu-option-item">
+                            <div class="clothing-menu-option-item-header" data-headertype="item-header"><p>Espesor</p></div>
+                            <div class="clothing-menu-option-item-left" data-type="item"><i class="fa fa-angle-left"></i></div> 
+                            <input type="number" class="item-number allow-negative-face" data-type="item" value="0">
+                            <div class="clothing-menu-option-item-right" data-type="item"><i class="fa fa-angle-right"></i></div>
+                        </div>
+                        <!-- <div class="clothing-menu-option-item">
+                            <div class="clothing-menu-option-item-header" data-headertype="texture-header"><p>Thickness</p></div>
+                            <div class="clothing-menu-option-item-left" data-type="texture"><i class="fa fa-angle-left"></i></div>
+                            <input type="number" class="item-number" data-type="texture" value="0">
+                            <div class="clothing-menu-option-item-right" data-type="texture"><i class="fa fa-angle-right"></i></div>
+                        </div> -->
+                    </div>
+                    <div class="clothing-menu-option" data-type="jaw_bone_width" id="anchura-mandibula">
+                        <div class="clothing-menu-option-header"><p>Ancho Mejillas</p></div>
+                        <div class="clothing-menu-option-item">
+                            <div class="clothing-menu-option-item-header" data-headertype="item-header"><p>Ancho</p></div>
+                            <div class="clothing-menu-option-item-left" data-type="item"><i class="fa fa-angle-left"></i></div> 
+                            <input type="number" class="item-number allow-negative-face" data-type="item" value="0">
+                            <div class="clothing-menu-option-item-right" data-type="item"><i class="fa fa-angle-right"></i></div>
+                        </div>
+                        <!-- <div class="clothing-menu-option-item">
+                            <div class="clothing-menu-option-item-header" data-headertype="texture-header"><p>Width</p></div>
+                            <div class="clothing-menu-option-item-left" data-type="texture"><i class="fa fa-angle-left"></i></div>
+                            <input type="number" class="item-number" data-type="texture" value="0">
+                            <div class="clothing-menu-option-item-right" data-type="texture"><i class="fa fa-angle-right"></i></div>
+                        </div> -->
+                    </div>
+                    <div class="clothing-menu-option" data-type="jaw_bone_back_lenght" id="long-mandibula">
+                        <div class="clothing-menu-option-header"><p>Longitud Mejillas</p></div>
+                        <div class="clothing-menu-option-item">
+                            <div class="clothing-menu-option-item-header" data-headertype="item-header"><p>Longitud</p></div>
+                            <div class="clothing-menu-option-item-left" data-type="item"><i class="fa fa-angle-left"></i></div> 
+                            <input type="number" class="item-number allow-negative-face" data-type="item" value="0">
+                            <div class="clothing-menu-option-item-right" data-type="item"><i class="fa fa-angle-right"></i></div>
+                        </div>
+                        <!-- <div class="clothing-menu-option-item">
+                            <div class="clothing-menu-option-item-header" data-headertype="texture-header"><p>Length</p></div>
+                            <div class="clothing-menu-option-item-left" data-type="texture"><i class="fa fa-angle-left"></i></div>
+                            <input type="number" class="item-number" data-type="texture" value="0">
+                            <div class="clothing-menu-option-item-right" data-type="texture"><i class="fa fa-angle-right"></i></div> -->
+                        <!-- </div> -->
+                    </div>
+                    <div class="clothing-menu-option" data-type="chimp_bone_lowering" id="altura-barbilla">
+                        <div class="clothing-menu-option-header"><p>Bajar Barbilla</p></div>
+                        <div class="clothing-menu-option-item">
+                            <div class="clothing-menu-option-item-header" data-headertype="item-header"><p>Bajar</p></div>
+                            <div class="clothing-menu-option-item-left" data-type="item"><i class="fa fa-angle-left"></i></div> 
+                            <input type="number" class="item-number allow-negative-face" data-type="item" value="0">
+                            <div class="clothing-menu-option-item-right" data-type="item"><i class="fa fa-angle-right"></i></div>
+                        </div>
+                        <!-- <div class="clothing-menu-option-item">
+                            <div class="clothing-menu-option-item-header" data-headertype="texture-header"><p>Lowering</p></div>
+                            <div class="clothing-menu-option-item-left" data-type="texture"><i class="fa fa-angle-left"></i></div>
+                            <input type="number" class="item-number" data-type="texture" value="0">
+                            <div class="clothing-menu-option-item-right" data-type="texture"><i class="fa fa-angle-right"></i></div>
+                        </div> -->
+                    </div>
+                    <div class="clothing-menu-option" data-type="chimp_bone_lenght" id="long-barbilla">
+                        <div class="clothing-menu-option-header"><p>Longitud Barbilla</p></div>
+                        <div class="clothing-menu-option-item">
+                            <div class="clothing-menu-option-item-header" data-headertype="item-header"><p>Longitud</p></div>
+                            <div class="clothing-menu-option-item-left" data-type="item"><i class="fa fa-angle-left"></i></div> 
+                            <input type="number" class="item-number allow-negative-face" data-type="item" value="0">
+                            <div class="clothing-menu-option-item-right" data-type="item"><i class="fa fa-angle-right"></i></div>
+                        </div>
+                        <!-- <div class="clothing-menu-option-item">
+                            <div class="clothing-menu-option-item-header" data-headertype="texture-header"><p>Length</p></div>
+                            <div class="clothing-menu-option-item-left" data-type="texture"><i class="fa fa-angle-left"></i></div>
+                            <input type="number" class="item-number" data-type="texture" value="0">
+                            <div class="clothing-menu-option-item-right" data-type="texture"><i class="fa fa-angle-right"></i></div>
+                        </div> -->
+                    </div>
+                    <div class="clothing-menu-option" data-type="chimp_bone_width" id="ancho-barbilla">
+                        <div class="clothing-menu-option-header"><p>Ancho Barbilla</p></div>
+                        <div class="clothing-menu-option-item">
+                            <div class="clothing-menu-option-item-header" data-headertype="item-header"><p>Ancho</p></div>
+                            <div class="clothing-menu-option-item-left" data-type="item"><i class="fa fa-angle-left"></i></div> 
+                            <input type="number" class="item-number allow-negative-face" data-type="item" value="0">
+                            <div class="clothing-menu-option-item-right" data-type="item"><i class="fa fa-angle-right"></i></div>
+                        </div>
+                        <!-- <div class="clothing-menu-option-item">
+                            <div class="clothing-menu-option-item-header" data-headertype="texture-header"><p>Width</p></div>
+                            <div class="clothing-menu-option-item-left" data-type="texture"><i class="fa fa-angle-left"></i></div>
+                            <input type="number" class="item-number" data-type="texture" value="0">
+                            <div class="clothing-menu-option-item-right" data-type="texture"><i class="fa fa-angle-right"></i></div>
+                        </div> -->
+                    </div>
+                    <div class="clothing-menu-option" data-type="chimp_hole" id="menton">
+                        <div class="clothing-menu-option-header"><p>Menton</p></div>
+                        <div class="clothing-menu-option-item">
+                            <div class="clothing-menu-option-item-header" data-headertype="item-header"><p>Menton</p></div>
+                            <div class="clothing-menu-option-item-left" data-type="item"><i class="fa fa-angle-left"></i></div> 
+                            <input type="number" class="item-number allow-negative-face" data-type="item" value="0">
+                            <div class="clothing-menu-option-item-right" data-type="item"><i class="fa fa-angle-right"></i></div>
+                        </div>
+                        <!-- <div class="clothing-menu-option-item">
+                            <div class="clothing-menu-option-item-header" data-headertype="texture-header"><p>Chin</p></div>
+                            <div class="clothing-menu-option-item-left" data-type="texture"><i class="fa fa-angle-left"></i></div>
+                            <input type="number" class="item-number" data-type="texture" value="0">
+                            <div class="clothing-menu-option-item-right" data-type="texture"><i class="fa fa-angle-right"></i></div>
+                        </div> -->
+                    </div>
+                    <div class="clothing-menu-option" data-type="neck_thikness" id="anchura-cuello">
+                        <div class="clothing-menu-option-header"><p>Anchura cuello</p></div>
+                        <div class="clothing-menu-option-item">
+                            <div class="clothing-menu-option-item-header" data-headertype="item-header"><p>Anchura</p></div>
+                            <div class="clothing-menu-option-item-left" data-type="item"><i class="fa fa-angle-left"></i></div> 
+                            <input type="number" class="item-number allow-negative-face" data-type="item" value="0">
+                            <div class="clothing-menu-option-item-right" data-type="item"><i class="fa fa-angle-right"></i></div>
+                        </div>
+                        
+                        <!-- <div class="clothing-menu-option-item">
+                            <div class="clothing-menu-option-item-header" data-headertype="texture-header"><p>Thiccness</p></div>
+                            <div class="clothing-menu-option-item-left" data-type="texture"><i class="fa fa-angle-left"></i></div>
+                            <input type="number" class="item-number" data-type="texture" value="0">
+                            <div class="clothing-menu-option-item-right" data-type="texture"><i class="fa fa-angle-right"></i></div>
+                        </div> -->
+                    </div>
+                </div>
+                <div class="clothing-menu-option" data-type="ageing" id="arrugas">
+                    <div class="clothing-menu-option-header"><p>Envejecimiento</p></div>
+                    <div class="clothing-menu-option-item">
+                        <div class="clothing-menu-option-item-header" data-headertype="item-header"><p>Tipo</p></div>
+                        <div class="clothing-menu-option-item-left" data-type="item"><i class="fa fa-angle-left"></i></div> 
+                        <input type="number" class="item-number" data-type="item" value="0">
+                        <div class="clothing-menu-option-item-right" data-type="item"><i class="fa fa-angle-right"></i></div>
+                    </div>
+                    <!-- <div class="clothing-menu-option-item">
+                        <div class="clothing-menu-option-item-header" data-headertype="texture-header"><p>Color</p></div>
+                        <div class="clothing-menu-option-item-left" data-type="texture"><i class="fa fa-angle-left"></i></div>
+                        <input type="number" class="item-number" data-type="texture" value="0">
+                        <div class="clothing-menu-option-item-right" data-type="texture"><i class="fa fa-angle-right"></i></div>
+                    </div> -->
+                    <div class="rangevalue"><p>0</p></div>
+                    <input type="range" oninput="sliderselector(this)" class="sliderselector" data-type="opacity" min="0" max="100">
+                </div>
+                <div class="clothing-menu-option" data-type="hair">
+                    <div class="clothing-menu-option-header"><p>Pelo</p></div>
+                    <div class="clothing-menu-option-item">
+                        <div class="clothing-menu-option-item-header" data-headertype="item-header"><p>Tipo</p></div>
+                        <div class="clothing-menu-option-item-left" data-type="item"><i class="fa fa-angle-left"></i></div> 
+                        <input type="number" class="item-number" data-type="item" value="0">
+                        <div class="clothing-menu-option-item-right" data-type="item"><i class="fa fa-angle-right"></i></div>
+                    </div>
+                    <!-- <div class="clothing-menu-option-item">
+                        <div class="clothing-menu-option-item-header" data-headertype="texture-header"><p>Color</p></div>
+                        <div class="clothing-menu-option-item-left" data-type="texture"><i class="fa fa-angle-left"></i></div>
+                        <input type="number" class="item-number" data-type="texture" value="0">
+                        <div class="clothing-menu-option-item-right" data-type="texture"><i class="fa fa-angle-right"></i></div>
+                    </div> -->
+                    <div class="colours">
+                        <div style="text-align: center; margin-bottom: 5px;"><p>Color</p></div>
+                        <div class="colour" data-type="texture" value="0" style="background-color:#1E1D1C;"></div>
+                        <div class="colour" data-type="texture" value="1" style="background-color:#272829;"></div>
+                        <div class="colour" data-type="texture" value="2" style="background-color:#2F2E2E;"></div>
+                        <div class="colour" data-type="texture" value="3" style="background-color:#36281C;"></div>
+                        <div class="colour" data-type="texture" value="4" style="background-color:#4C3120;"></div>
+                        <div class="colour" data-type="texture" value="5" style="background-color:#5D3629;"></div>
+                        <div class="colour" data-type="texture" value="6" style="background-color:#6A4A31;"></div>
+                        <div class="colour" data-type="texture" value="7" style="background-color:#735031;"></div>
+                        <div class="colour" data-type="texture" value="8" style="background-color:#815F41;"></div>
+                        <div class="colour" data-type="texture" value="9" style="background-color:#815F41;"></div>
+                        <div class="colour" data-type="texture" value="10" style="background-color:#9B8054;"></div>
+                        <div class="colour" data-type="texture" value="11" style="background-color:#A78e66;"></div>
+                        <div class="colour" data-type="texture" value="12" style="background-color:#AE9870;"></div>
+                        <div class="colour" data-type="texture" value="13" style="background-color:#BA9C5A;"></div>
+                        <div class="colour" data-type="texture" value="14" style="background-color:#CCB870;"></div>
+                        <div class="colour" data-type="texture" value="15" style="background-color:#DEC086;"></div>
+                        <div class="colour" data-type="texture" value="16" style="background-color:#A48054;"></div>
+                        <div class="colour" data-type="texture" value="17" style="background-color:#96532D;"></div>
+                        <div class="colour" data-type="texture" value="18" style="background-color:#852E15;"></div>
+                        <div class="colour" data-type="texture" value="19" style="background-color:#921600;"></div>
+                        <div class="colour" data-type="texture" value="20" style="background-color:#ae1d00;"></div>
+                        <div class="colour" data-type="texture" value="21" style="background-color:#ac1e00;"></div>
+                        <div class="colour" data-type="texture" value="22" style="background-color:#d53903;"></div>
+                        <div class="colour" data-type="texture" value="23" style="background-color:#e15210;"></div>
+                        <div class="colour" data-type="texture" value="24" style="background-color:#c6551f;"></div>
+                        <div class="colour" data-type="texture" value="25" style="background-color:#d25619;"></div>
+                        <div class="colour" data-type="texture" value="26" style="background-color:#615f5b;"></div>
+                        <div class="colour" data-type="texture" value="27" style="background-color:#7f7f7d;"></div>
+                        <div class="colour" data-type="texture" value="28" style="background-color:#a8a7a4;"></div>
+                        <div class="colour" data-type="texture" value="29" style="background-color:#c5c2c0;"></div>
+                        <div class="colour" data-type="texture" value="30" style="background-color:#4d3b51;"></div>
+                        <div class="colour" data-type="texture" value="31" style="background-color:#6c435f;"></div>
+                        <div class="colour" data-type="texture" value="32" style="background-color:#9a4569;"></div>
+                        <div class="colour" data-type="texture" value="33" style="background-color:#ff88cc;"></div>
+                        <div class="colour" data-type="texture" value="34" style="background-color:#ff5e74;"></div>
+                        <div class="colour" data-type="texture" value="35" style="background-color:#ffa1a9;"></div>
+                        <div class="colour" data-type="texture" value="36" style="background-color:#0087b3;"></div>
+                        <div class="colour" data-type="texture" value="37" style="background-color:#00579a;"></div>
+                        <div class="colour" data-type="texture" value="38" style="background-color:#003784;"></div>
+                        <div class="colour" data-type="texture" value="39" style="background-color:#0c937d;"></div>
+                        <div class="colour" data-type="texture" value="40" style="background-color:#006f6d;"></div>
+                        <div class="colour" data-type="texture" value="41" style="background-color:#005460;"></div>
+                        <div class="colour" data-type="texture" value="42" style="background-color:#9cb431;"></div>
+                        <div class="colour" data-type="texture" value="43" style="background-color:#3b950a;"></div>
+                        <div class="colour" data-type="texture" value="44" style="background-color:#058a20;"></div>
+                        <div class="colour" data-type="texture" value="45" style="background-color:#dfb34c;"></div>
+                        <div class="colour" data-type="texture" value="46" style="background-color:#e3ab00;"></div>
+                        <div class="colour" data-type="texture" value="47" style="background-color:#f69100;"></div>
+                        <div class="colour" data-type="texture" value="48" style="background-color:#ff8a16;"></div>
+                        <div class="colour" data-type="texture" value="49" style="background-color:#ff893d;"></div>
+                        <div class="colour" data-type="texture" value="50" style="background-color:#ff8f45;"></div>
+                        <div class="colour" data-type="texture" value="51" style="background-color:#ff601c;"></div>
+                        <div class="colour" data-type="texture" value="52" style="background-color:#ff3f02;"></div>
+                        <div class="colour" data-type="texture" value="53" style="background-color:#fb1a00;"></div>
+                        <div class="colour" data-type="texture" value="54" style="background-color:#c51100;"></div>
+                        <div class="colour" data-type="texture" value="55" style="background-color:#201912;"></div>
+                        <div class="colour" data-type="texture" value="56" style="background-color:#2b1f18;"></div>
+                        <div class="colour" data-type="texture" value="57" style="background-color:#312219;"></div>
+                        <div class="colour" data-type="texture" value="58" style="background-color:#362a1a;"></div>
+                        <div class="colour" data-type="texture" value="59" style="background-color:#2e2012;"></div>
+                        <div class="colour" data-type="texture" value="60" style="background-color:#231b11;"></div>
+                        <div class="colour" data-type="texture" value="61" style="background-color:#070200;"></div>
+                        <div class="colour" data-type="texture" value="62" style="background-color:#726a64;"></div>
+                        <div class="colour" data-type="texture" value="63" style="background-color:#a37946;"></div>
+                    </div>
+                    <div class="colours bottom">
+                        <div style="text-align: center; margin-bottom: 5px;"><p>Color secundario</p></div>
+                        <div class="colour" data-type="texture2" value="0" style="background-color:#1E1D1C;"></div>
+                        <div class="colour" data-type="texture2" value="1" style="background-color:#272829;"></div>
+                        <div class="colour" data-type="texture2" value="2" style="background-color:#2F2E2E;"></div>
+                        <div class="colour" data-type="texture2" value="3" style="background-color:#36281C;"></div>
+                        <div class="colour" data-type="texture2" value="4" style="background-color:#4C3120;"></div>
+                        <div class="colour" data-type="texture2" value="5" style="background-color:#5D3629;"></div>
+                        <div class="colour" data-type="texture2" value="6" style="background-color:#6A4A31;"></div>
+                        <div class="colour" data-type="texture2" value="7" style="background-color:#735031;"></div>
+                        <div class="colour" data-type="texture2" value="8" style="background-color:#815F41;"></div>
+                        <div class="colour" data-type="texture2" value="9" style="background-color:#815F41;"></div>
+                        <div class="colour" data-type="texture2" value="10" style="background-color:#9B8054;"></div>
+                        <div class="colour" data-type="texture2" value="11" style="background-color:#A78e66;"></div>
+                        <div class="colour" data-type="texture2" value="12" style="background-color:#AE9870;"></div>
+                        <div class="colour" data-type="texture2" value="13" style="background-color:#BA9C5A;"></div>
+                        <div class="colour" data-type="texture2" value="14" style="background-color:#CCB870;"></div>
+                        <div class="colour" data-type="texture2" value="15" style="background-color:#DEC086;"></div>
+                        <div class="colour" data-type="texture2" value="16" style="background-color:#A48054;"></div>
+                        <div class="colour" data-type="texture2" value="17" style="background-color:#96532D;"></div>
+                        <div class="colour" data-type="texture2" value="18" style="background-color:#852E15;"></div>
+                        <div class="colour" data-type="texture2" value="19" style="background-color:#921600;"></div>
+                        <div class="colour" data-type="texture2" value="20" style="background-color:#ae1d00;"></div>
+                        <div class="colour" data-type="texture2" value="21" style="background-color:#ac1e00;"></div>
+                        <div class="colour" data-type="texture2" value="22" style="background-color:#d53903;"></div>
+                        <div class="colour" data-type="texture2" value="23" style="background-color:#e15210;"></div>
+                        <div class="colour" data-type="texture2" value="24" style="background-color:#c6551f;"></div>
+                        <div class="colour" data-type="texture2" value="25" style="background-color:#d25619;"></div>
+                        <div class="colour" data-type="texture2" value="26" style="background-color:#615f5b;"></div>
+                        <div class="colour" data-type="texture2" value="27" style="background-color:#7f7f7d;"></div>
+                        <div class="colour" data-type="texture2" value="28" style="background-color:#a8a7a4;"></div>
+                        <div class="colour" data-type="texture2" value="29" style="background-color:#c5c2c0;"></div>
+                        <div class="colour" data-type="texture2" value="30" style="background-color:#4d3b51;"></div>
+                        <div class="colour" data-type="texture2" value="31" style="background-color:#6c435f;"></div>
+                        <div class="colour" data-type="texture2" value="32" style="background-color:#9a4569;"></div>
+                        <div class="colour" data-type="texture2" value="33" style="background-color:#ff88cc;"></div>
+                        <div class="colour" data-type="texture2" value="34" style="background-color:#ff5e74;"></div>
+                        <div class="colour" data-type="texture2" value="35" style="background-color:#ffa1a9;"></div>
+                        <div class="colour" data-type="texture2" value="36" style="background-color:#0087b3;"></div>
+                        <div class="colour" data-type="texture2" value="37" style="background-color:#00579a;"></div>
+                        <div class="colour" data-type="texture2" value="38" style="background-color:#003784;"></div>
+                        <div class="colour" data-type="texture2" value="39" style="background-color:#0c937d;"></div>
+                        <div class="colour" data-type="texture2" value="40" style="background-color:#006f6d;"></div>
+                        <div class="colour" data-type="texture2" value="41" style="background-color:#005460;"></div>
+                        <div class="colour" data-type="texture2" value="42" style="background-color:#9cb431;"></div>
+                        <div class="colour" data-type="texture2" value="43" style="background-color:#3b950a;"></div>
+                        <div class="colour" data-type="texture2" value="44" style="background-color:#058a20;"></div>
+                        <div class="colour" data-type="texture2" value="45" style="background-color:#dfb34c;"></div>
+                        <div class="colour" data-type="texture2" value="46" style="background-color:#e3ab00;"></div>
+                        <div class="colour" data-type="texture2" value="47" style="background-color:#f69100;"></div>
+                        <div class="colour" data-type="texture2" value="48" style="background-color:#ff8a16;"></div>
+                        <div class="colour" data-type="texture2" value="49" style="background-color:#ff893d;"></div>
+                        <div class="colour" data-type="texture2" value="50" style="background-color:#ff8f45;"></div>
+                        <div class="colour" data-type="texture2" value="51" style="background-color:#ff601c;"></div>
+                        <div class="colour" data-type="texture2" value="52" style="background-color:#ff3f02;"></div>
+                        <div class="colour" data-type="texture2" value="53" style="background-color:#fb1a00;"></div>
+                        <div class="colour" data-type="texture2" value="54" style="background-color:#c51100;"></div>
+                        <div class="colour" data-type="texture2" value="55" style="background-color:#201912;"></div>
+                        <div class="colour" data-type="texture2" value="56" style="background-color:#2b1f18;"></div>
+                        <div class="colour" data-type="texture2" value="57" style="background-color:#312219;"></div>
+                        <div class="colour" data-type="texture2" value="58" style="background-color:#362a1a;"></div>
+                        <div class="colour" data-type="texture2" value="59" style="background-color:#2e2012;"></div>
+                        <div class="colour" data-type="texture2" value="60" style="background-color:#231b11;"></div>
+                        <div class="colour" data-type="texture2" value="61" style="background-color:#070200;"></div>
+                        <div class="colour" data-type="texture2" value="62" style="background-color:#726a64;"></div>
+                        <div class="colour" data-type="texture2" value="63" style="background-color:#a37946;"></div>
+                    </div>
+                </div>
+                <div class="clothing-menu-option" data-type="chest_hair">
+                    <div class="clothing-menu-option-header"><p>Pelo en el pecho</p></div>
+                    <div class="clothing-menu-option-item">
+                        <div class="clothing-menu-option-item-header" data-headertype="item-header"><p>Tipo</p></div>
+                        <div class="clothing-menu-option-item-left" data-type="item"><i class="fa fa-angle-left"></i></div> 
+                        <input type="number" class="item-number" data-type="item" value="0">
+                        <div class="clothing-menu-option-item-right" data-type="item"><i class="fa fa-angle-right"></i></div>
+                    </div>
+                    <!-- <div class="clothing-menu-option-item">
+                        <div class="clothing-menu-option-item-header" data-headertype="texture-header"><p>Color</p></div>
+                        <div class="clothing-menu-option-item-left" data-type="texture"><i class="fa fa-angle-left"></i></div>
+                        <input type="number" class="item-number" data-type="texture" value="0">
+                        <div class="clothing-menu-option-item-right" data-type="texture"><i class="fa fa-angle-right"></i></div>
+                    </div> -->
+                    <div class="colours">
+                        <div style="text-align: center; margin-bottom: 5px;"><p>Color</p></div>
+                        <div class="colour" data-type="texture" value="0" style="background-color:#1E1D1C;"></div>
+                        <div class="colour" data-type="texture" value="1" style="background-color:#272829;"></div>
+                        <div class="colour" data-type="texture" value="2" style="background-color:#2F2E2E;"></div>
+                        <div class="colour" data-type="texture" value="3" style="background-color:#36281C;"></div>
+                        <div class="colour" data-type="texture" value="4" style="background-color:#4C3120;"></div>
+                        <div class="colour" data-type="texture" value="5" style="background-color:#5D3629;"></div>
+                        <div class="colour" data-type="texture" value="6" style="background-color:#6A4A31;"></div>
+                        <div class="colour" data-type="texture" value="7" style="background-color:#735031;"></div>
+                        <div class="colour" data-type="texture" value="8" style="background-color:#815F41;"></div>
+                        <div class="colour" data-type="texture" value="9" style="background-color:#815F41;"></div>
+                        <div class="colour" data-type="texture" value="10" style="background-color:#9B8054;"></div>
+                        <div class="colour" data-type="texture" value="11" style="background-color:#A78e66;"></div>
+                        <div class="colour" data-type="texture" value="12" style="background-color:#AE9870;"></div>
+                        <div class="colour" data-type="texture" value="13" style="background-color:#BA9C5A;"></div>
+                        <div class="colour" data-type="texture" value="14" style="background-color:#CCB870;"></div>
+                        <div class="colour" data-type="texture" value="15" style="background-color:#DEC086;"></div>
+                        <div class="colour" data-type="texture" value="16" style="background-color:#A48054;"></div>
+                        <div class="colour" data-type="texture" value="17" style="background-color:#96532D;"></div>
+                        <div class="colour" data-type="texture" value="18" style="background-color:#852E15;"></div>
+                        <div class="colour" data-type="texture" value="19" style="background-color:#921600;"></div>
+                        <div class="colour" data-type="texture" value="20" style="background-color:#ae1d00;"></div>
+                        <div class="colour" data-type="texture" value="21" style="background-color:#ac1e00;"></div>
+                        <div class="colour" data-type="texture" value="22" style="background-color:#d53903;"></div>
+                        <div class="colour" data-type="texture" value="23" style="background-color:#e15210;"></div>
+                        <div class="colour" data-type="texture" value="24" style="background-color:#c6551f;"></div>
+                        <div class="colour" data-type="texture" value="25" style="background-color:#d25619;"></div>
+                        <div class="colour" data-type="texture" value="26" style="background-color:#615f5b;"></div>
+                        <div class="colour" data-type="texture" value="27" style="background-color:#7f7f7d;"></div>
+                        <div class="colour" data-type="texture" value="28" style="background-color:#a8a7a4;"></div>
+                        <div class="colour" data-type="texture" value="29" style="background-color:#c5c2c0;"></div>
+                        <div class="colour" data-type="texture" value="30" style="background-color:#4d3b51;"></div>
+                        <div class="colour" data-type="texture" value="31" style="background-color:#6c435f;"></div>
+                        <div class="colour" data-type="texture" value="32" style="background-color:#9a4569;"></div>
+                        <div class="colour" data-type="texture" value="33" style="background-color:#ff88cc;"></div>
+                        <div class="colour" data-type="texture" value="34" style="background-color:#ff5e74;"></div>
+                        <div class="colour" data-type="texture" value="35" style="background-color:#ffa1a9;"></div>
+                        <div class="colour" data-type="texture" value="36" style="background-color:#0087b3;"></div>
+                        <div class="colour" data-type="texture" value="37" style="background-color:#00579a;"></div>
+                        <div class="colour" data-type="texture" value="38" style="background-color:#003784;"></div>
+                        <div class="colour" data-type="texture" value="39" style="background-color:#0c937d;"></div>
+                        <div class="colour" data-type="texture" value="40" style="background-color:#006f6d;"></div>
+                        <div class="colour" data-type="texture" value="41" style="background-color:#005460;"></div>
+                        <div class="colour" data-type="texture" value="42" style="background-color:#9cb431;"></div>
+                        <div class="colour" data-type="texture" value="43" style="background-color:#3b950a;"></div>
+                        <div class="colour" data-type="texture" value="44" style="background-color:#058a20;"></div>
+                        <div class="colour" data-type="texture" value="45" style="background-color:#dfb34c;"></div>
+                        <div class="colour" data-type="texture" value="46" style="background-color:#e3ab00;"></div>
+                        <div class="colour" data-type="texture" value="47" style="background-color:#f69100;"></div>
+                        <div class="colour" data-type="texture" value="48" style="background-color:#ff8a16;"></div>
+                        <div class="colour" data-type="texture" value="49" style="background-color:#ff893d;"></div>
+                        <div class="colour" data-type="texture" value="50" style="background-color:#ff8f45;"></div>
+                        <div class="colour" data-type="texture" value="51" style="background-color:#ff601c;"></div>
+                        <div class="colour" data-type="texture" value="52" style="background-color:#ff3f02;"></div>
+                        <div class="colour" data-type="texture" value="53" style="background-color:#fb1a00;"></div>
+                        <div class="colour" data-type="texture" value="54" style="background-color:#c51100;"></div>
+                        <div class="colour" data-type="texture" value="55" style="background-color:#201912;"></div>
+                        <div class="colour" data-type="texture" value="56" style="background-color:#2b1f18;"></div>
+                        <div class="colour" data-type="texture" value="57" style="background-color:#312219;"></div>
+                        <div class="colour" data-type="texture" value="58" style="background-color:#362a1a;"></div>
+                        <div class="colour" data-type="texture" value="59" style="background-color:#2e2012;"></div>
+                        <div class="colour" data-type="texture" value="60" style="background-color:#231b11;"></div>
+                        <div class="colour" data-type="texture" value="61" style="background-color:#070200;"></div>
+                        <div class="colour" data-type="texture" value="62" style="background-color:#726a64;"></div>
+                        <div class="colour" data-type="texture" value="63" style="background-color:#a37946;"></div>
+                    </div>
+                    <div class="colours bottom">
+                        <div style="text-align: center; margin-bottom: 5px;"><p>Color secundario</p></div>
+                        <div class="colour" data-type="texture2" value="0" style="background-color:#1E1D1C;"></div>
+                        <div class="colour" data-type="texture2" value="1" style="background-color:#272829;"></div>
+                        <div class="colour" data-type="texture2" value="2" style="background-color:#2F2E2E;"></div>
+                        <div class="colour" data-type="texture2" value="3" style="background-color:#36281C;"></div>
+                        <div class="colour" data-type="texture2" value="4" style="background-color:#4C3120;"></div>
+                        <div class="colour" data-type="texture2" value="5" style="background-color:#5D3629;"></div>
+                        <div class="colour" data-type="texture2" value="6" style="background-color:#6A4A31;"></div>
+                        <div class="colour" data-type="texture2" value="7" style="background-color:#735031;"></div>
+                        <div class="colour" data-type="texture2" value="8" style="background-color:#815F41;"></div>
+                        <div class="colour" data-type="texture2" value="9" style="background-color:#815F41;"></div>
+                        <div class="colour" data-type="texture2" value="10" style="background-color:#9B8054;"></div>
+                        <div class="colour" data-type="texture2" value="11" style="background-color:#A78e66;"></div>
+                        <div class="colour" data-type="texture2" value="12" style="background-color:#AE9870;"></div>
+                        <div class="colour" data-type="texture2" value="13" style="background-color:#BA9C5A;"></div>
+                        <div class="colour" data-type="texture2" value="14" style="background-color:#CCB870;"></div>
+                        <div class="colour" data-type="texture2" value="15" style="background-color:#DEC086;"></div>
+                        <div class="colour" data-type="texture2" value="16" style="background-color:#A48054;"></div>
+                        <div class="colour" data-type="texture2" value="17" style="background-color:#96532D;"></div>
+                        <div class="colour" data-type="texture2" value="18" style="background-color:#852E15;"></div>
+                        <div class="colour" data-type="texture2" value="19" style="background-color:#921600;"></div>
+                        <div class="colour" data-type="texture2" value="20" style="background-color:#ae1d00;"></div>
+                        <div class="colour" data-type="texture2" value="21" style="background-color:#ac1e00;"></div>
+                        <div class="colour" data-type="texture2" value="22" style="background-color:#d53903;"></div>
+                        <div class="colour" data-type="texture2" value="23" style="background-color:#e15210;"></div>
+                        <div class="colour" data-type="texture2" value="24" style="background-color:#c6551f;"></div>
+                        <div class="colour" data-type="texture2" value="25" style="background-color:#d25619;"></div>
+                        <div class="colour" data-type="texture2" value="26" style="background-color:#615f5b;"></div>
+                        <div class="colour" data-type="texture2" value="27" style="background-color:#7f7f7d;"></div>
+                        <div class="colour" data-type="texture2" value="28" style="background-color:#a8a7a4;"></div>
+                        <div class="colour" data-type="texture2" value="29" style="background-color:#c5c2c0;"></div>
+                        <div class="colour" data-type="texture2" value="30" style="background-color:#4d3b51;"></div>
+                        <div class="colour" data-type="texture2" value="31" style="background-color:#6c435f;"></div>
+                        <div class="colour" data-type="texture2" value="32" style="background-color:#9a4569;"></div>
+                        <div class="colour" data-type="texture2" value="33" style="background-color:#ff88cc;"></div>
+                        <div class="colour" data-type="texture2" value="34" style="background-color:#ff5e74;"></div>
+                        <div class="colour" data-type="texture2" value="35" style="background-color:#ffa1a9;"></div>
+                        <div class="colour" data-type="texture2" value="36" style="background-color:#0087b3;"></div>
+                        <div class="colour" data-type="texture2" value="37" style="background-color:#00579a;"></div>
+                        <div class="colour" data-type="texture2" value="38" style="background-color:#003784;"></div>
+                        <div class="colour" data-type="texture2" value="39" style="background-color:#0c937d;"></div>
+                        <div class="colour" data-type="texture2" value="40" style="background-color:#006f6d;"></div>
+                        <div class="colour" data-type="texture2" value="41" style="background-color:#005460;"></div>
+                        <div class="colour" data-type="texture2" value="42" style="background-color:#9cb431;"></div>
+                        <div class="colour" data-type="texture2" value="43" style="background-color:#3b950a;"></div>
+                        <div class="colour" data-type="texture2" value="44" style="background-color:#058a20;"></div>
+                        <div class="colour" data-type="texture2" value="45" style="background-color:#dfb34c;"></div>
+                        <div class="colour" data-type="texture2" value="46" style="background-color:#e3ab00;"></div>
+                        <div class="colour" data-type="texture2" value="47" style="background-color:#f69100;"></div>
+                        <div class="colour" data-type="texture2" value="48" style="background-color:#ff8a16;"></div>
+                        <div class="colour" data-type="texture2" value="49" style="background-color:#ff893d;"></div>
+                        <div class="colour" data-type="texture2" value="50" style="background-color:#ff8f45;"></div>
+                        <div class="colour" data-type="texture2" value="51" style="background-color:#ff601c;"></div>
+                        <div class="colour" data-type="texture2" value="52" style="background-color:#ff3f02;"></div>
+                        <div class="colour" data-type="texture2" value="53" style="background-color:#fb1a00;"></div>
+                        <div class="colour" data-type="texture2" value="54" style="background-color:#c51100;"></div>
+                        <div class="colour" data-type="texture2" value="55" style="background-color:#201912;"></div>
+                        <div class="colour" data-type="texture2" value="56" style="background-color:#2b1f18;"></div>
+                        <div class="colour" data-type="texture2" value="57" style="background-color:#312219;"></div>
+                        <div class="colour" data-type="texture2" value="58" style="background-color:#362a1a;"></div>
+                        <div class="colour" data-type="texture2" value="59" style="background-color:#2e2012;"></div>
+                        <div class="colour" data-type="texture2" value="60" style="background-color:#231b11;"></div>
+                        <div class="colour" data-type="texture2" value="61" style="background-color:#070200;"></div>
+                        <div class="colour" data-type="texture2" value="62" style="background-color:#726a64;"></div>
+                        <div class="colour" data-type="texture2" value="63" style="background-color:#a37946;"></div>
+                    </div>
+                    <div class="rangevalue"><p>0</p></div>
+                    <input type="range" oninput="sliderselector(this)" class="sliderselector" data-type="opacity" min="0" max="100">
+                </div>
+                <div class="clothing-menu-option" data-type="eyebrows">
+                    <div class="clothing-menu-option-header"><p>Cejas</p></div>
+                    <div class="clothing-menu-option-item">
+                        <div class="clothing-menu-option-item-header" data-headertype="item-header"><p>Tipo</p></div>
+                        <div class="clothing-menu-option-item-left" data-type="item"><i class="fa fa-angle-left"></i></div> 
+                        <input type="number" class="item-number" data-type="item" value="0">
+                        <div class="clothing-menu-option-item-right" data-type="item"><i class="fa fa-angle-right"></i></div>
+                    </div>
+                    <!-- <div class="clothing-menu-option-item">
+                        <div class="clothing-menu-option-item-header" data-headertype="texture-header"><p>Color</p></div>
+                        <div class="clothing-menu-option-item-left" data-type="texture"><i class="fa fa-angle-left"></i></div>
+                        <input type="number" class="item-number" data-type="texture" value="0">
+                        <div class="clothing-menu-option-item-right" data-type="texture"><i class="fa fa-angle-right"></i></div>
+                    </div> -->
+                    <div class="colours">
+                        <div style="text-align: center; margin-bottom: 5px;"><p>Color</p></div>
+                        <div class="colour" data-type="texture" value="0" style="background-color:#1E1D1C;"></div>
+                        <div class="colour" data-type="texture" value="1" style="background-color:#272829;"></div>
+                        <div class="colour" data-type="texture" value="2" style="background-color:#2F2E2E;"></div>
+                        <div class="colour" data-type="texture" value="3" style="background-color:#36281C;"></div>
+                        <div class="colour" data-type="texture" value="4" style="background-color:#4C3120;"></div>
+                        <div class="colour" data-type="texture" value="5" style="background-color:#5D3629;"></div>
+                        <div class="colour" data-type="texture" value="6" style="background-color:#6A4A31;"></div>
+                        <div class="colour" data-type="texture" value="7" style="background-color:#735031;"></div>
+                        <div class="colour" data-type="texture" value="8" style="background-color:#815F41;"></div>
+                        <div class="colour" data-type="texture" value="9" style="background-color:#815F41;"></div>
+                        <div class="colour" data-type="texture" value="10" style="background-color:#9B8054;"></div>
+                        <div class="colour" data-type="texture" value="11" style="background-color:#A78e66;"></div>
+                        <div class="colour" data-type="texture" value="12" style="background-color:#AE9870;"></div>
+                        <div class="colour" data-type="texture" value="13" style="background-color:#BA9C5A;"></div>
+                        <div class="colour" data-type="texture" value="14" style="background-color:#CCB870;"></div>
+                        <div class="colour" data-type="texture" value="15" style="background-color:#DEC086;"></div>
+                        <div class="colour" data-type="texture" value="16" style="background-color:#A48054;"></div>
+                        <div class="colour" data-type="texture" value="17" style="background-color:#96532D;"></div>
+                        <div class="colour" data-type="texture" value="18" style="background-color:#852E15;"></div>
+                        <div class="colour" data-type="texture" value="19" style="background-color:#921600;"></div>
+                        <div class="colour" data-type="texture" value="20" style="background-color:#ae1d00;"></div>
+                        <div class="colour" data-type="texture" value="21" style="background-color:#ac1e00;"></div>
+                        <div class="colour" data-type="texture" value="22" style="background-color:#d53903;"></div>
+                        <div class="colour" data-type="texture" value="23" style="background-color:#e15210;"></div>
+                        <div class="colour" data-type="texture" value="24" style="background-color:#c6551f;"></div>
+                        <div class="colour" data-type="texture" value="25" style="background-color:#d25619;"></div>
+                        <div class="colour" data-type="texture" value="26" style="background-color:#615f5b;"></div>
+                        <div class="colour" data-type="texture" value="27" style="background-color:#7f7f7d;"></div>
+                        <div class="colour" data-type="texture" value="28" style="background-color:#a8a7a4;"></div>
+                        <div class="colour" data-type="texture" value="29" style="background-color:#c5c2c0;"></div>
+                        <div class="colour" data-type="texture" value="30" style="background-color:#4d3b51;"></div>
+                        <div class="colour" data-type="texture" value="31" style="background-color:#6c435f;"></div>
+                        <div class="colour" data-type="texture" value="32" style="background-color:#9a4569;"></div>
+                        <div class="colour" data-type="texture" value="33" style="background-color:#ff88cc;"></div>
+                        <div class="colour" data-type="texture" value="34" style="background-color:#ff5e74;"></div>
+                        <div class="colour" data-type="texture" value="35" style="background-color:#ffa1a9;"></div>
+                        <div class="colour" data-type="texture" value="36" style="background-color:#0087b3;"></div>
+                        <div class="colour" data-type="texture" value="37" style="background-color:#00579a;"></div>
+                        <div class="colour" data-type="texture" value="38" style="background-color:#003784;"></div>
+                        <div class="colour" data-type="texture" value="39" style="background-color:#0c937d;"></div>
+                        <div class="colour" data-type="texture" value="40" style="background-color:#006f6d;"></div>
+                        <div class="colour" data-type="texture" value="41" style="background-color:#005460;"></div>
+                        <div class="colour" data-type="texture" value="42" style="background-color:#9cb431;"></div>
+                        <div class="colour" data-type="texture" value="43" style="background-color:#3b950a;"></div>
+                        <div class="colour" data-type="texture" value="44" style="background-color:#058a20;"></div>
+                        <div class="colour" data-type="texture" value="45" style="background-color:#dfb34c;"></div>
+                        <div class="colour" data-type="texture" value="46" style="background-color:#e3ab00;"></div>
+                        <div class="colour" data-type="texture" value="47" style="background-color:#f69100;"></div>
+                        <div class="colour" data-type="texture" value="48" style="background-color:#ff8a16;"></div>
+                        <div class="colour" data-type="texture" value="49" style="background-color:#ff893d;"></div>
+                        <div class="colour" data-type="texture" value="50" style="background-color:#ff8f45;"></div>
+                        <div class="colour" data-type="texture" value="51" style="background-color:#ff601c;"></div>
+                        <div class="colour" data-type="texture" value="52" style="background-color:#ff3f02;"></div>
+                        <div class="colour" data-type="texture" value="53" style="background-color:#fb1a00;"></div>
+                        <div class="colour" data-type="texture" value="54" style="background-color:#c51100;"></div>
+                        <div class="colour" data-type="texture" value="55" style="background-color:#201912;"></div>
+                        <div class="colour" data-type="texture" value="56" style="background-color:#2b1f18;"></div>
+                        <div class="colour" data-type="texture" value="57" style="background-color:#312219;"></div>
+                        <div class="colour" data-type="texture" value="58" style="background-color:#362a1a;"></div>
+                        <div class="colour" data-type="texture" value="59" style="background-color:#2e2012;"></div>
+                        <div class="colour" data-type="texture" value="60" style="background-color:#231b11;"></div>
+                        <div class="colour" data-type="texture" value="61" style="background-color:#070200;"></div>
+                        <div class="colour" data-type="texture" value="62" style="background-color:#726a64;"></div>
+                        <div class="colour" data-type="texture" value="63" style="background-color:#a37946;"></div>
+                    </div>
+                    <div class="colours bottom">
+                        <div style="text-align: center; margin-bottom: 5px;"><p>Color secundario</p></div>
+                        <div class="colour" data-type="texture2" value="0" style="background-color:#1E1D1C;"></div>
+                        <div class="colour" data-type="texture2" value="1" style="background-color:#272829;"></div>
+                        <div class="colour" data-type="texture2" value="2" style="background-color:#2F2E2E;"></div>
+                        <div class="colour" data-type="texture2" value="3" style="background-color:#36281C;"></div>
+                        <div class="colour" data-type="texture2" value="4" style="background-color:#4C3120;"></div>
+                        <div class="colour" data-type="texture2" value="5" style="background-color:#5D3629;"></div>
+                        <div class="colour" data-type="texture2" value="6" style="background-color:#6A4A31;"></div>
+                        <div class="colour" data-type="texture2" value="7" style="background-color:#735031;"></div>
+                        <div class="colour" data-type="texture2" value="8" style="background-color:#815F41;"></div>
+                        <div class="colour" data-type="texture2" value="9" style="background-color:#815F41;"></div>
+                        <div class="colour" data-type="texture2" value="10" style="background-color:#9B8054;"></div>
+                        <div class="colour" data-type="texture2" value="11" style="background-color:#A78e66;"></div>
+                        <div class="colour" data-type="texture2" value="12" style="background-color:#AE9870;"></div>
+                        <div class="colour" data-type="texture2" value="13" style="background-color:#BA9C5A;"></div>
+                        <div class="colour" data-type="texture2" value="14" style="background-color:#CCB870;"></div>
+                        <div class="colour" data-type="texture2" value="15" style="background-color:#DEC086;"></div>
+                        <div class="colour" data-type="texture2" value="16" style="background-color:#A48054;"></div>
+                        <div class="colour" data-type="texture2" value="17" style="background-color:#96532D;"></div>
+                        <div class="colour" data-type="texture2" value="18" style="background-color:#852E15;"></div>
+                        <div class="colour" data-type="texture2" value="19" style="background-color:#921600;"></div>
+                        <div class="colour" data-type="texture2" value="20" style="background-color:#ae1d00;"></div>
+                        <div class="colour" data-type="texture2" value="21" style="background-color:#ac1e00;"></div>
+                        <div class="colour" data-type="texture2" value="22" style="background-color:#d53903;"></div>
+                        <div class="colour" data-type="texture2" value="23" style="background-color:#e15210;"></div>
+                        <div class="colour" data-type="texture2" value="24" style="background-color:#c6551f;"></div>
+                        <div class="colour" data-type="texture2" value="25" style="background-color:#d25619;"></div>
+                        <div class="colour" data-type="texture2" value="26" style="background-color:#615f5b;"></div>
+                        <div class="colour" data-type="texture2" value="27" style="background-color:#7f7f7d;"></div>
+                        <div class="colour" data-type="texture2" value="28" style="background-color:#a8a7a4;"></div>
+                        <div class="colour" data-type="texture2" value="29" style="background-color:#c5c2c0;"></div>
+                        <div class="colour" data-type="texture2" value="30" style="background-color:#4d3b51;"></div>
+                        <div class="colour" data-type="texture2" value="31" style="background-color:#6c435f;"></div>
+                        <div class="colour" data-type="texture2" value="32" style="background-color:#9a4569;"></div>
+                        <div class="colour" data-type="texture2" value="33" style="background-color:#ff88cc;"></div>
+                        <div class="colour" data-type="texture2" value="34" style="background-color:#ff5e74;"></div>
+                        <div class="colour" data-type="texture2" value="35" style="background-color:#ffa1a9;"></div>
+                        <div class="colour" data-type="texture2" value="36" style="background-color:#0087b3;"></div>
+                        <div class="colour" data-type="texture2" value="37" style="background-color:#00579a;"></div>
+                        <div class="colour" data-type="texture2" value="38" style="background-color:#003784;"></div>
+                        <div class="colour" data-type="texture2" value="39" style="background-color:#0c937d;"></div>
+                        <div class="colour" data-type="texture2" value="40" style="background-color:#006f6d;"></div>
+                        <div class="colour" data-type="texture2" value="41" style="background-color:#005460;"></div>
+                        <div class="colour" data-type="texture2" value="42" style="background-color:#9cb431;"></div>
+                        <div class="colour" data-type="texture2" value="43" style="background-color:#3b950a;"></div>
+                        <div class="colour" data-type="texture2" value="44" style="background-color:#058a20;"></div>
+                        <div class="colour" data-type="texture2" value="45" style="background-color:#dfb34c;"></div>
+                        <div class="colour" data-type="texture2" value="46" style="background-color:#e3ab00;"></div>
+                        <div class="colour" data-type="texture2" value="47" style="background-color:#f69100;"></div>
+                        <div class="colour" data-type="texture2" value="48" style="background-color:#ff8a16;"></div>
+                        <div class="colour" data-type="texture2" value="49" style="background-color:#ff893d;"></div>
+                        <div class="colour" data-type="texture2" value="50" style="background-color:#ff8f45;"></div>
+                        <div class="colour" data-type="texture2" value="51" style="background-color:#ff601c;"></div>
+                        <div class="colour" data-type="texture2" value="52" style="background-color:#ff3f02;"></div>
+                        <div class="colour" data-type="texture2" value="53" style="background-color:#fb1a00;"></div>
+                        <div class="colour" data-type="texture2" value="54" style="background-color:#c51100;"></div>
+                        <div class="colour" data-type="texture2" value="55" style="background-color:#201912;"></div>
+                        <div class="colour" data-type="texture2" value="56" style="background-color:#2b1f18;"></div>
+                        <div class="colour" data-type="texture2" value="57" style="background-color:#312219;"></div>
+                        <div class="colour" data-type="texture2" value="58" style="background-color:#362a1a;"></div>
+                        <div class="colour" data-type="texture2" value="59" style="background-color:#2e2012;"></div>
+                        <div class="colour" data-type="texture2" value="60" style="background-color:#231b11;"></div>
+                        <div class="colour" data-type="texture2" value="61" style="background-color:#070200;"></div>
+                        <div class="colour" data-type="texture2" value="62" style="background-color:#726a64;"></div>
+                        <div class="colour" data-type="texture2" value="63" style="background-color:#a37946;"></div>
+                    </div>
+                    <div class="rangevalue"><p>0</p></div>
+                    <input type="range" oninput="sliderselector(this)" class="sliderselector" data-type="opacity" min="0" max="100">
+                </div>
+                <div class="clothing-menu-option" data-type="beard">
+                    <div class="clothing-menu-option-header"><p>Barba</p></div>
+                    <div class="clothing-menu-option-item">
+                        <div class="clothing-menu-option-item-header" data-headertype="item-header"><p>Tipo</p></div>
+                        <div class="clothing-menu-option-item-left" data-type="item"><i class="fa fa-angle-left"></i></div> 
+                        <input type="number" class="item-number" data-type="item" value="0">
+                        <div class="clothing-menu-option-item-right" data-type="item"><i class="fa fa-angle-right"></i></div>
+                    </div>
+                    <!-- <div class="clothing-menu-option-item">
+                        <div class="clothing-menu-option-item-header" data-headertype="texture-header"><p>Color</p></div>
+                        <div class="clothing-menu-option-item-left" data-type="texture"><i class="fa fa-angle-left"></i></div>
+                        <input type="number" class="item-number" data-type="texture" value="0">
+                        <div class="clothing-menu-option-item-right" data-type="texture"><i class="fa fa-angle-right"></i></div>
+                    </div> -->
+                    <div class="colours">
+                        <div style="text-align: center; margin-bottom: 5px;"><p>Color</p></div>
+                        <div class="colour" data-type="texture" value="0" style="background-color:#1E1D1C;"></div>
+                        <div class="colour" data-type="texture" value="1" style="background-color:#272829;"></div>
+                        <div class="colour" data-type="texture" value="2" style="background-color:#2F2E2E;"></div>
+                        <div class="colour" data-type="texture" value="3" style="background-color:#36281C;"></div>
+                        <div class="colour" data-type="texture" value="4" style="background-color:#4C3120;"></div>
+                        <div class="colour" data-type="texture" value="5" style="background-color:#5D3629;"></div>
+                        <div class="colour" data-type="texture" value="6" style="background-color:#6A4A31;"></div>
+                        <div class="colour" data-type="texture" value="7" style="background-color:#735031;"></div>
+                        <div class="colour" data-type="texture" value="8" style="background-color:#815F41;"></div>
+                        <div class="colour" data-type="texture" value="9" style="background-color:#815F41;"></div>
+                        <div class="colour" data-type="texture" value="10" style="background-color:#9B8054;"></div>
+                        <div class="colour" data-type="texture" value="11" style="background-color:#A78e66;"></div>
+                        <div class="colour" data-type="texture" value="12" style="background-color:#AE9870;"></div>
+                        <div class="colour" data-type="texture" value="13" style="background-color:#BA9C5A;"></div>
+                        <div class="colour" data-type="texture" value="14" style="background-color:#CCB870;"></div>
+                        <div class="colour" data-type="texture" value="15" style="background-color:#DEC086;"></div>
+                        <div class="colour" data-type="texture" value="16" style="background-color:#A48054;"></div>
+                        <div class="colour" data-type="texture" value="17" style="background-color:#96532D;"></div>
+                        <div class="colour" data-type="texture" value="18" style="background-color:#852E15;"></div>
+                        <div class="colour" data-type="texture" value="19" style="background-color:#921600;"></div>
+                        <div class="colour" data-type="texture" value="20" style="background-color:#ae1d00;"></div>
+                        <div class="colour" data-type="texture" value="21" style="background-color:#ac1e00;"></div>
+                        <div class="colour" data-type="texture" value="22" style="background-color:#d53903;"></div>
+                        <div class="colour" data-type="texture" value="23" style="background-color:#e15210;"></div>
+                        <div class="colour" data-type="texture" value="24" style="background-color:#c6551f;"></div>
+                        <div class="colour" data-type="texture" value="25" style="background-color:#d25619;"></div>
+                        <div class="colour" data-type="texture" value="26" style="background-color:#615f5b;"></div>
+                        <div class="colour" data-type="texture" value="27" style="background-color:#7f7f7d;"></div>
+                        <div class="colour" data-type="texture" value="28" style="background-color:#a8a7a4;"></div>
+                        <div class="colour" data-type="texture" value="29" style="background-color:#c5c2c0;"></div>
+                        <div class="colour" data-type="texture" value="30" style="background-color:#4d3b51;"></div>
+                        <div class="colour" data-type="texture" value="31" style="background-color:#6c435f;"></div>
+                        <div class="colour" data-type="texture" value="32" style="background-color:#9a4569;"></div>
+                        <div class="colour" data-type="texture" value="33" style="background-color:#ff88cc;"></div>
+                        <div class="colour" data-type="texture" value="34" style="background-color:#ff5e74;"></div>
+                        <div class="colour" data-type="texture" value="35" style="background-color:#ffa1a9;"></div>
+                        <div class="colour" data-type="texture" value="36" style="background-color:#0087b3;"></div>
+                        <div class="colour" data-type="texture" value="37" style="background-color:#00579a;"></div>
+                        <div class="colour" data-type="texture" value="38" style="background-color:#003784;"></div>
+                        <div class="colour" data-type="texture" value="39" style="background-color:#0c937d;"></div>
+                        <div class="colour" data-type="texture" value="40" style="background-color:#006f6d;"></div>
+                        <div class="colour" data-type="texture" value="41" style="background-color:#005460;"></div>
+                        <div class="colour" data-type="texture" value="42" style="background-color:#9cb431;"></div>
+                        <div class="colour" data-type="texture" value="43" style="background-color:#3b950a;"></div>
+                        <div class="colour" data-type="texture" value="44" style="background-color:#058a20;"></div>
+                        <div class="colour" data-type="texture" value="45" style="background-color:#dfb34c;"></div>
+                        <div class="colour" data-type="texture" value="46" style="background-color:#e3ab00;"></div>
+                        <div class="colour" data-type="texture" value="47" style="background-color:#f69100;"></div>
+                        <div class="colour" data-type="texture" value="48" style="background-color:#ff8a16;"></div>
+                        <div class="colour" data-type="texture" value="49" style="background-color:#ff893d;"></div>
+                        <div class="colour" data-type="texture" value="50" style="background-color:#ff8f45;"></div>
+                        <div class="colour" data-type="texture" value="51" style="background-color:#ff601c;"></div>
+                        <div class="colour" data-type="texture" value="52" style="background-color:#ff3f02;"></div>
+                        <div class="colour" data-type="texture" value="53" style="background-color:#fb1a00;"></div>
+                        <div class="colour" data-type="texture" value="54" style="background-color:#c51100;"></div>
+                        <div class="colour" data-type="texture" value="55" style="background-color:#201912;"></div>
+                        <div class="colour" data-type="texture" value="56" style="background-color:#2b1f18;"></div>
+                        <div class="colour" data-type="texture" value="57" style="background-color:#312219;"></div>
+                        <div class="colour" data-type="texture" value="58" style="background-color:#362a1a;"></div>
+                        <div class="colour" data-type="texture" value="59" style="background-color:#2e2012;"></div>
+                        <div class="colour" data-type="texture" value="60" style="background-color:#231b11;"></div>
+                        <div class="colour" data-type="texture" value="61" style="background-color:#070200;"></div>
+                        <div class="colour" data-type="texture" value="62" style="background-color:#726a64;"></div>
+                        <div class="colour" data-type="texture" value="63" style="background-color:#a37946;"></div>
+                    </div>
+                    <div class="colours bottom">
+                        <div style="text-align: center; margin-bottom: 5px;"><p>Color secundario</p></div>
+                        <div class="colour" data-type="texture2" value="0" style="background-color:#1E1D1C;"></div>
+                        <div class="colour" data-type="texture2" value="1" style="background-color:#272829;"></div>
+                        <div class="colour" data-type="texture2" value="2" style="background-color:#2F2E2E;"></div>
+                        <div class="colour" data-type="texture2" value="3" style="background-color:#36281C;"></div>
+                        <div class="colour" data-type="texture2" value="4" style="background-color:#4C3120;"></div>
+                        <div class="colour" data-type="texture2" value="5" style="background-color:#5D3629;"></div>
+                        <div class="colour" data-type="texture2" value="6" style="background-color:#6A4A31;"></div>
+                        <div class="colour" data-type="texture2" value="7" style="background-color:#735031;"></div>
+                        <div class="colour" data-type="texture2" value="8" style="background-color:#815F41;"></div>
+                        <div class="colour" data-type="texture2" value="9" style="background-color:#815F41;"></div>
+                        <div class="colour" data-type="texture2" value="10" style="background-color:#9B8054;"></div>
+                        <div class="colour" data-type="texture2" value="11" style="background-color:#A78e66;"></div>
+                        <div class="colour" data-type="texture2" value="12" style="background-color:#AE9870;"></div>
+                        <div class="colour" data-type="texture2" value="13" style="background-color:#BA9C5A;"></div>
+                        <div class="colour" data-type="texture2" value="14" style="background-color:#CCB870;"></div>
+                        <div class="colour" data-type="texture2" value="15" style="background-color:#DEC086;"></div>
+                        <div class="colour" data-type="texture2" value="16" style="background-color:#A48054;"></div>
+                        <div class="colour" data-type="texture2" value="17" style="background-color:#96532D;"></div>
+                        <div class="colour" data-type="texture2" value="18" style="background-color:#852E15;"></div>
+                        <div class="colour" data-type="texture2" value="19" style="background-color:#921600;"></div>
+                        <div class="colour" data-type="texture2" value="20" style="background-color:#ae1d00;"></div>
+                        <div class="colour" data-type="texture2" value="21" style="background-color:#ac1e00;"></div>
+                        <div class="colour" data-type="texture2" value="22" style="background-color:#d53903;"></div>
+                        <div class="colour" data-type="texture2" value="23" style="background-color:#e15210;"></div>
+                        <div class="colour" data-type="texture2" value="24" style="background-color:#c6551f;"></div>
+                        <div class="colour" data-type="texture2" value="25" style="background-color:#d25619;"></div>
+                        <div class="colour" data-type="texture2" value="26" style="background-color:#615f5b;"></div>
+                        <div class="colour" data-type="texture2" value="27" style="background-color:#7f7f7d;"></div>
+                        <div class="colour" data-type="texture2" value="28" style="background-color:#a8a7a4;"></div>
+                        <div class="colour" data-type="texture2" value="29" style="background-color:#c5c2c0;"></div>
+                        <div class="colour" data-type="texture2" value="30" style="background-color:#4d3b51;"></div>
+                        <div class="colour" data-type="texture2" value="31" style="background-color:#6c435f;"></div>
+                        <div class="colour" data-type="texture2" value="32" style="background-color:#9a4569;"></div>
+                        <div class="colour" data-type="texture2" value="33" style="background-color:#ff88cc;"></div>
+                        <div class="colour" data-type="texture2" value="34" style="background-color:#ff5e74;"></div>
+                        <div class="colour" data-type="texture2" value="35" style="background-color:#ffa1a9;"></div>
+                        <div class="colour" data-type="texture2" value="36" style="background-color:#0087b3;"></div>
+                        <div class="colour" data-type="texture2" value="37" style="background-color:#00579a;"></div>
+                        <div class="colour" data-type="texture2" value="38" style="background-color:#003784;"></div>
+                        <div class="colour" data-type="texture2" value="39" style="background-color:#0c937d;"></div>
+                        <div class="colour" data-type="texture2" value="40" style="background-color:#006f6d;"></div>
+                        <div class="colour" data-type="texture2" value="41" style="background-color:#005460;"></div>
+                        <div class="colour" data-type="texture2" value="42" style="background-color:#9cb431;"></div>
+                        <div class="colour" data-type="texture2" value="43" style="background-color:#3b950a;"></div>
+                        <div class="colour" data-type="texture2" value="44" style="background-color:#058a20;"></div>
+                        <div class="colour" data-type="texture2" value="45" style="background-color:#dfb34c;"></div>
+                        <div class="colour" data-type="texture2" value="46" style="background-color:#e3ab00;"></div>
+                        <div class="colour" data-type="texture2" value="47" style="background-color:#f69100;"></div>
+                        <div class="colour" data-type="texture2" value="48" style="background-color:#ff8a16;"></div>
+                        <div class="colour" data-type="texture2" value="49" style="background-color:#ff893d;"></div>
+                        <div class="colour" data-type="texture2" value="50" style="background-color:#ff8f45;"></div>
+                        <div class="colour" data-type="texture2" value="51" style="background-color:#ff601c;"></div>
+                        <div class="colour" data-type="texture2" value="52" style="background-color:#ff3f02;"></div>
+                        <div class="colour" data-type="texture2" value="53" style="background-color:#fb1a00;"></div>
+                        <div class="colour" data-type="texture2" value="54" style="background-color:#c51100;"></div>
+                        <div class="colour" data-type="texture2" value="55" style="background-color:#201912;"></div>
+                        <div class="colour" data-type="texture2" value="56" style="background-color:#2b1f18;"></div>
+                        <div class="colour" data-type="texture2" value="57" style="background-color:#312219;"></div>
+                        <div class="colour" data-type="texture2" value="58" style="background-color:#362a1a;"></div>
+                        <div class="colour" data-type="texture2" value="59" style="background-color:#2e2012;"></div>
+                        <div class="colour" data-type="texture2" value="60" style="background-color:#231b11;"></div>
+                        <div class="colour" data-type="texture2" value="61" style="background-color:#070200;"></div>
+                        <div class="colour" data-type="texture2" value="62" style="background-color:#726a64;"></div>
+                        <div class="colour" data-type="texture2" value="63" style="background-color:#a37946;"></div>
+                    </div>
+                    <div class="rangevalue"><p>0</p></div>
+                    <input type="range" oninput="sliderselector(this)" class="sliderselector" data-type="opacity" min="0" max="100">
+                </div>
+                <div class="clothing-menu-option" data-type="lipstick">
+                    <div class="clothing-menu-option-header"><p>Lápiz labial</p></div>
+                    <div class="clothing-menu-option-item">
+                        <div class="clothing-menu-option-item-header" data-headertype="item-header"><p>Tipo</p></div>
+                        <div class="clothing-menu-option-item-left" data-type="item"><i class="fa fa-angle-left"></i></div> 
+                        <input type="number" class="item-number" data-type="item" value="0">
+                        <div class="clothing-menu-option-item-right" data-type="item"><i class="fa fa-angle-right"></i></div>
+                    </div>
+                    <!-- <div class="clothing-menu-option-item">
+                        <div class="clothing-menu-option-item-header" data-headertype="texture-header"><p>Color</p></div>
+                        <div class="clothing-menu-option-item-left" data-type="texture"><i class="fa fa-angle-left"></i></div>
+                        <input type="number" class="item-number" data-type="texture" value="0">
+                        <div class="clothing-menu-option-item-right" data-type="texture"><i class="fa fa-angle-right"></i></div>
+                    </div> -->
+                    <div class="colours">
+                        <div style="text-align: center; margin-bottom: 5px;"><p>Color</p></div>
+                        <div class="colour" data-type="texture" value="0" style="background-color:#1E1D1C;"></div>
+                        <div class="colour" data-type="texture" value="1" style="background-color:#272829;"></div>
+                        <div class="colour" data-type="texture" value="2" style="background-color:#2F2E2E;"></div>
+                        <div class="colour" data-type="texture" value="3" style="background-color:#36281C;"></div>
+                        <div class="colour" data-type="texture" value="4" style="background-color:#4C3120;"></div>
+                        <div class="colour" data-type="texture" value="5" style="background-color:#5D3629;"></div>
+                        <div class="colour" data-type="texture" value="6" style="background-color:#6A4A31;"></div>
+                        <div class="colour" data-type="texture" value="7" style="background-color:#735031;"></div>
+                        <div class="colour" data-type="texture" value="8" style="background-color:#815F41;"></div>
+                        <div class="colour" data-type="texture" value="9" style="background-color:#815F41;"></div>
+                        <div class="colour" data-type="texture" value="10" style="background-color:#9B8054;"></div>
+                        <div class="colour" data-type="texture" value="11" style="background-color:#A78e66;"></div>
+                        <div class="colour" data-type="texture" value="12" style="background-color:#AE9870;"></div>
+                        <div class="colour" data-type="texture" value="13" style="background-color:#BA9C5A;"></div>
+                        <div class="colour" data-type="texture" value="14" style="background-color:#CCB870;"></div>
+                        <div class="colour" data-type="texture" value="15" style="background-color:#DEC086;"></div>
+                        <div class="colour" data-type="texture" value="16" style="background-color:#A48054;"></div>
+                        <div class="colour" data-type="texture" value="17" style="background-color:#96532D;"></div>
+                        <div class="colour" data-type="texture" value="18" style="background-color:#852E15;"></div>
+                        <div class="colour" data-type="texture" value="19" style="background-color:#921600;"></div>
+                        <div class="colour" data-type="texture" value="20" style="background-color:#ae1d00;"></div>
+                        <div class="colour" data-type="texture" value="21" style="background-color:#ac1e00;"></div>
+                        <div class="colour" data-type="texture" value="22" style="background-color:#d53903;"></div>
+                        <div class="colour" data-type="texture" value="23" style="background-color:#e15210;"></div>
+                        <div class="colour" data-type="texture" value="24" style="background-color:#c6551f;"></div>
+                        <div class="colour" data-type="texture" value="25" style="background-color:#d25619;"></div>
+                        <div class="colour" data-type="texture" value="26" style="background-color:#615f5b;"></div>
+                        <div class="colour" data-type="texture" value="27" style="background-color:#7f7f7d;"></div>
+                        <div class="colour" data-type="texture" value="28" style="background-color:#a8a7a4;"></div>
+                        <div class="colour" data-type="texture" value="29" style="background-color:#c5c2c0;"></div>
+                        <div class="colour" data-type="texture" value="30" style="background-color:#4d3b51;"></div>
+                        <div class="colour" data-type="texture" value="31" style="background-color:#6c435f;"></div>
+                        <div class="colour" data-type="texture" value="32" style="background-color:#9a4569;"></div>
+                        <div class="colour" data-type="texture" value="33" style="background-color:#ff88cc;"></div>
+                        <div class="colour" data-type="texture" value="34" style="background-color:#ff5e74;"></div>
+                        <div class="colour" data-type="texture" value="35" style="background-color:#ffa1a9;"></div>
+                        <div class="colour" data-type="texture" value="36" style="background-color:#0087b3;"></div>
+                        <div class="colour" data-type="texture" value="37" style="background-color:#00579a;"></div>
+                        <div class="colour" data-type="texture" value="38" style="background-color:#003784;"></div>
+                        <div class="colour" data-type="texture" value="39" style="background-color:#0c937d;"></div>
+                        <div class="colour" data-type="texture" value="40" style="background-color:#006f6d;"></div>
+                        <div class="colour" data-type="texture" value="41" style="background-color:#005460;"></div>
+                        <div class="colour" data-type="texture" value="42" style="background-color:#9cb431;"></div>
+                        <div class="colour" data-type="texture" value="43" style="background-color:#3b950a;"></div>
+                        <div class="colour" data-type="texture" value="44" style="background-color:#058a20;"></div>
+                        <div class="colour" data-type="texture" value="45" style="background-color:#dfb34c;"></div>
+                        <div class="colour" data-type="texture" value="46" style="background-color:#e3ab00;"></div>
+                        <div class="colour" data-type="texture" value="47" style="background-color:#f69100;"></div>
+                        <div class="colour" data-type="texture" value="48" style="background-color:#ff8a16;"></div>
+                        <div class="colour" data-type="texture" value="49" style="background-color:#ff893d;"></div>
+                        <div class="colour" data-type="texture" value="50" style="background-color:#ff8f45;"></div>
+                        <div class="colour" data-type="texture" value="51" style="background-color:#ff601c;"></div>
+                        <div class="colour" data-type="texture" value="52" style="background-color:#ff3f02;"></div>
+                        <div class="colour" data-type="texture" value="53" style="background-color:#fb1a00;"></div>
+                        <div class="colour" data-type="texture" value="54" style="background-color:#c51100;"></div>
+                        <div class="colour" data-type="texture" value="55" style="background-color:#201912;"></div>
+                        <div class="colour" data-type="texture" value="56" style="background-color:#2b1f18;"></div>
+                        <div class="colour" data-type="texture" value="57" style="background-color:#312219;"></div>
+                        <div class="colour" data-type="texture" value="58" style="background-color:#362a1a;"></div>
+                        <div class="colour" data-type="texture" value="59" style="background-color:#2e2012;"></div>
+                        <div class="colour" data-type="texture" value="60" style="background-color:#231b11;"></div>
+                        <div class="colour" data-type="texture" value="61" style="background-color:#070200;"></div>
+                        <div class="colour" data-type="texture" value="62" style="background-color:#726a64;"></div>
+                        <div class="colour" data-type="texture" value="63" style="background-color:#a37946;"></div>
+                    </div>
+                    <div class="colours bottom">
+                        <div style="text-align: center; margin-bottom: 5px;"><p>Color secundario</p></div>
+                        <div class="colour" data-type="texture2" value="0" style="background-color:#1E1D1C;"></div>
+                        <div class="colour" data-type="texture2" value="1" style="background-color:#272829;"></div>
+                        <div class="colour" data-type="texture2" value="2" style="background-color:#2F2E2E;"></div>
+                        <div class="colour" data-type="texture2" value="3" style="background-color:#36281C;"></div>
+                        <div class="colour" data-type="texture2" value="4" style="background-color:#4C3120;"></div>
+                        <div class="colour" data-type="texture2" value="5" style="background-color:#5D3629;"></div>
+                        <div class="colour" data-type="texture2" value="6" style="background-color:#6A4A31;"></div>
+                        <div class="colour" data-type="texture2" value="7" style="background-color:#735031;"></div>
+                        <div class="colour" data-type="texture2" value="8" style="background-color:#815F41;"></div>
+                        <div class="colour" data-type="texture2" value="9" style="background-color:#815F41;"></div>
+                        <div class="colour" data-type="texture2" value="10" style="background-color:#9B8054;"></div>
+                        <div class="colour" data-type="texture2" value="11" style="background-color:#A78e66;"></div>
+                        <div class="colour" data-type="texture2" value="12" style="background-color:#AE9870;"></div>
+                        <div class="colour" data-type="texture2" value="13" style="background-color:#BA9C5A;"></div>
+                        <div class="colour" data-type="texture2" value="14" style="background-color:#CCB870;"></div>
+                        <div class="colour" data-type="texture2" value="15" style="background-color:#DEC086;"></div>
+                        <div class="colour" data-type="texture2" value="16" style="background-color:#A48054;"></div>
+                        <div class="colour" data-type="texture2" value="17" style="background-color:#96532D;"></div>
+                        <div class="colour" data-type="texture2" value="18" style="background-color:#852E15;"></div>
+                        <div class="colour" data-type="texture2" value="19" style="background-color:#921600;"></div>
+                        <div class="colour" data-type="texture2" value="20" style="background-color:#ae1d00;"></div>
+                        <div class="colour" data-type="texture2" value="21" style="background-color:#ac1e00;"></div>
+                        <div class="colour" data-type="texture2" value="22" style="background-color:#d53903;"></div>
+                        <div class="colour" data-type="texture2" value="23" style="background-color:#e15210;"></div>
+                        <div class="colour" data-type="texture2" value="24" style="background-color:#c6551f;"></div>
+                        <div class="colour" data-type="texture2" value="25" style="background-color:#d25619;"></div>
+                        <div class="colour" data-type="texture2" value="26" style="background-color:#615f5b;"></div>
+                        <div class="colour" data-type="texture2" value="27" style="background-color:#7f7f7d;"></div>
+                        <div class="colour" data-type="texture2" value="28" style="background-color:#a8a7a4;"></div>
+                        <div class="colour" data-type="texture2" value="29" style="background-color:#c5c2c0;"></div>
+                        <div class="colour" data-type="texture2" value="30" style="background-color:#4d3b51;"></div>
+                        <div class="colour" data-type="texture2" value="31" style="background-color:#6c435f;"></div>
+                        <div class="colour" data-type="texture2" value="32" style="background-color:#9a4569;"></div>
+                        <div class="colour" data-type="texture2" value="33" style="background-color:#ff88cc;"></div>
+                        <div class="colour" data-type="texture2" value="34" style="background-color:#ff5e74;"></div>
+                        <div class="colour" data-type="texture2" value="35" style="background-color:#ffa1a9;"></div>
+                        <div class="colour" data-type="texture2" value="36" style="background-color:#0087b3;"></div>
+                        <div class="colour" data-type="texture2" value="37" style="background-color:#00579a;"></div>
+                        <div class="colour" data-type="texture2" value="38" style="background-color:#003784;"></div>
+                        <div class="colour" data-type="texture2" value="39" style="background-color:#0c937d;"></div>
+                        <div class="colour" data-type="texture2" value="40" style="background-color:#006f6d;"></div>
+                        <div class="colour" data-type="texture2" value="41" style="background-color:#005460;"></div>
+                        <div class="colour" data-type="texture2" value="42" style="background-color:#9cb431;"></div>
+                        <div class="colour" data-type="texture2" value="43" style="background-color:#3b950a;"></div>
+                        <div class="colour" data-type="texture2" value="44" style="background-color:#058a20;"></div>
+                        <div class="colour" data-type="texture2" value="45" style="background-color:#dfb34c;"></div>
+                        <div class="colour" data-type="texture2" value="46" style="background-color:#e3ab00;"></div>
+                        <div class="colour" data-type="texture2" value="47" style="background-color:#f69100;"></div>
+                        <div class="colour" data-type="texture2" value="48" style="background-color:#ff8a16;"></div>
+                        <div class="colour" data-type="texture2" value="49" style="background-color:#ff893d;"></div>
+                        <div class="colour" data-type="texture2" value="50" style="background-color:#ff8f45;"></div>
+                        <div class="colour" data-type="texture2" value="51" style="background-color:#ff601c;"></div>
+                        <div class="colour" data-type="texture2" value="52" style="background-color:#ff3f02;"></div>
+                        <div class="colour" data-type="texture2" value="53" style="background-color:#fb1a00;"></div>
+                        <div class="colour" data-type="texture2" value="54" style="background-color:#c51100;"></div>
+                        <div class="colour" data-type="texture2" value="55" style="background-color:#201912;"></div>
+                        <div class="colour" data-type="texture2" value="56" style="background-color:#2b1f18;"></div>
+                        <div class="colour" data-type="texture2" value="57" style="background-color:#312219;"></div>
+                        <div class="colour" data-type="texture2" value="58" style="background-color:#362a1a;"></div>
+                        <div class="colour" data-type="texture2" value="59" style="background-color:#2e2012;"></div>
+                        <div class="colour" data-type="texture2" value="60" style="background-color:#231b11;"></div>
+                        <div class="colour" data-type="texture2" value="61" style="background-color:#070200;"></div>
+                        <div class="colour" data-type="texture2" value="62" style="background-color:#726a64;"></div>
+                        <div class="colour" data-type="texture2" value="63" style="background-color:#a37946;"></div>
+                    </div>
+                    <div class="rangevalue"><p>0</p></div>
+                    <input type="range" oninput="sliderselector(this)" class="sliderselector" data-type="opacity" min="0" max="100">
+                </div>
+                <div class="clothing-menu-option" data-type="blush">
+                    <div class="clothing-menu-option-header"><p>Rubor</p></div>
+                    <div class="clothing-menu-option-item">
+                        <div class="clothing-menu-option-item-header" data-headertype="item-header"><p>Tipo</p></div>
+                        <div class="clothing-menu-option-item-left" data-type="item"><i class="fa fa-angle-left"></i></div> 
+                        <input type="number" class="item-number" data-type="item" value="0">
+                        <div class="clothing-menu-option-item-right" data-type="item"><i class="fa fa-angle-right"></i></div>
+                    </div>
+                    <!-- <div class="clothing-menu-option-item">
+                        <div class="clothing-menu-option-item-header" data-headertype="texture-header"><p>Color</p></div>
+                        <div class="clothing-menu-option-item-left" data-type="texture"><i class="fa fa-angle-left"></i></div>
+                        <input type="number" class="item-number" data-type="texture" value="0">
+                        <div class="clothing-menu-option-item-right" data-type="texture"><i class="fa fa-angle-right"></i></div>
+                    </div> -->
+                    <div class="colours">
+                        <div style="text-align: center; margin-bottom: 5px;"><p>Color</p></div>
+                        <div class="colour" data-type="texture" value="0" style="background-color:#1E1D1C;"></div>
+                        <div class="colour" data-type="texture" value="1" style="background-color:#272829;"></div>
+                        <div class="colour" data-type="texture" value="2" style="background-color:#2F2E2E;"></div>
+                        <div class="colour" data-type="texture" value="3" style="background-color:#36281C;"></div>
+                        <div class="colour" data-type="texture" value="4" style="background-color:#4C3120;"></div>
+                        <div class="colour" data-type="texture" value="5" style="background-color:#5D3629;"></div>
+                        <div class="colour" data-type="texture" value="6" style="background-color:#6A4A31;"></div>
+                        <div class="colour" data-type="texture" value="7" style="background-color:#735031;"></div>
+                        <div class="colour" data-type="texture" value="8" style="background-color:#815F41;"></div>
+                        <div class="colour" data-type="texture" value="9" style="background-color:#815F41;"></div>
+                        <div class="colour" data-type="texture" value="10" style="background-color:#9B8054;"></div>
+                        <div class="colour" data-type="texture" value="11" style="background-color:#A78e66;"></div>
+                        <div class="colour" data-type="texture" value="12" style="background-color:#AE9870;"></div>
+                        <div class="colour" data-type="texture" value="13" style="background-color:#BA9C5A;"></div>
+                        <div class="colour" data-type="texture" value="14" style="background-color:#CCB870;"></div>
+                        <div class="colour" data-type="texture" value="15" style="background-color:#DEC086;"></div>
+                        <div class="colour" data-type="texture" value="16" style="background-color:#A48054;"></div>
+                        <div class="colour" data-type="texture" value="17" style="background-color:#96532D;"></div>
+                        <div class="colour" data-type="texture" value="18" style="background-color:#852E15;"></div>
+                        <div class="colour" data-type="texture" value="19" style="background-color:#921600;"></div>
+                        <div class="colour" data-type="texture" value="20" style="background-color:#ae1d00;"></div>
+                        <div class="colour" data-type="texture" value="21" style="background-color:#ac1e00;"></div>
+                        <div class="colour" data-type="texture" value="22" style="background-color:#d53903;"></div>
+                        <div class="colour" data-type="texture" value="23" style="background-color:#e15210;"></div>
+                        <div class="colour" data-type="texture" value="24" style="background-color:#c6551f;"></div>
+                        <div class="colour" data-type="texture" value="25" style="background-color:#d25619;"></div>
+                        <div class="colour" data-type="texture" value="26" style="background-color:#615f5b;"></div>
+                        <div class="colour" data-type="texture" value="27" style="background-color:#7f7f7d;"></div>
+                        <div class="colour" data-type="texture" value="28" style="background-color:#a8a7a4;"></div>
+                        <div class="colour" data-type="texture" value="29" style="background-color:#c5c2c0;"></div>
+                        <div class="colour" data-type="texture" value="30" style="background-color:#4d3b51;"></div>
+                        <div class="colour" data-type="texture" value="31" style="background-color:#6c435f;"></div>
+                        <div class="colour" data-type="texture" value="32" style="background-color:#9a4569;"></div>
+                        <div class="colour" data-type="texture" value="33" style="background-color:#ff88cc;"></div>
+                        <div class="colour" data-type="texture" value="34" style="background-color:#ff5e74;"></div>
+                        <div class="colour" data-type="texture" value="35" style="background-color:#ffa1a9;"></div>
+                        <div class="colour" data-type="texture" value="36" style="background-color:#0087b3;"></div>
+                        <div class="colour" data-type="texture" value="37" style="background-color:#00579a;"></div>
+                        <div class="colour" data-type="texture" value="38" style="background-color:#003784;"></div>
+                        <div class="colour" data-type="texture" value="39" style="background-color:#0c937d;"></div>
+                        <div class="colour" data-type="texture" value="40" style="background-color:#006f6d;"></div>
+                        <div class="colour" data-type="texture" value="41" style="background-color:#005460;"></div>
+                        <div class="colour" data-type="texture" value="42" style="background-color:#9cb431;"></div>
+                        <div class="colour" data-type="texture" value="43" style="background-color:#3b950a;"></div>
+                        <div class="colour" data-type="texture" value="44" style="background-color:#058a20;"></div>
+                        <div class="colour" data-type="texture" value="45" style="background-color:#dfb34c;"></div>
+                        <div class="colour" data-type="texture" value="46" style="background-color:#e3ab00;"></div>
+                        <div class="colour" data-type="texture" value="47" style="background-color:#f69100;"></div>
+                        <div class="colour" data-type="texture" value="48" style="background-color:#ff8a16;"></div>
+                        <div class="colour" data-type="texture" value="49" style="background-color:#ff893d;"></div>
+                        <div class="colour" data-type="texture" value="50" style="background-color:#ff8f45;"></div>
+                        <div class="colour" data-type="texture" value="51" style="background-color:#ff601c;"></div>
+                        <div class="colour" data-type="texture" value="52" style="background-color:#ff3f02;"></div>
+                        <div class="colour" data-type="texture" value="53" style="background-color:#fb1a00;"></div>
+                        <div class="colour" data-type="texture" value="54" style="background-color:#c51100;"></div>
+                        <div class="colour" data-type="texture" value="55" style="background-color:#201912;"></div>
+                        <div class="colour" data-type="texture" value="56" style="background-color:#2b1f18;"></div>
+                        <div class="colour" data-type="texture" value="57" style="background-color:#312219;"></div>
+                        <div class="colour" data-type="texture" value="58" style="background-color:#362a1a;"></div>
+                        <div class="colour" data-type="texture" value="59" style="background-color:#2e2012;"></div>
+                        <div class="colour" data-type="texture" value="60" style="background-color:#231b11;"></div>
+                        <div class="colour" data-type="texture" value="61" style="background-color:#070200;"></div>
+                        <div class="colour" data-type="texture" value="62" style="background-color:#726a64;"></div>
+                        <div class="colour" data-type="texture" value="63" style="background-color:#a37946;"></div>
+                    </div>
+                    <div class="colours bottom">
+                        <div style="text-align: center; margin-bottom: 5px;"><p>Color secundario</p></div>
+                        <div class="colour" data-type="texture2" value="0" style="background-color:#1E1D1C;"></div>
+                        <div class="colour" data-type="texture2" value="1" style="background-color:#272829;"></div>
+                        <div class="colour" data-type="texture2" value="2" style="background-color:#2F2E2E;"></div>
+                        <div class="colour" data-type="texture2" value="3" style="background-color:#36281C;"></div>
+                        <div class="colour" data-type="texture2" value="4" style="background-color:#4C3120;"></div>
+                        <div class="colour" data-type="texture2" value="5" style="background-color:#5D3629;"></div>
+                        <div class="colour" data-type="texture2" value="6" style="background-color:#6A4A31;"></div>
+                        <div class="colour" data-type="texture2" value="7" style="background-color:#735031;"></div>
+                        <div class="colour" data-type="texture2" value="8" style="background-color:#815F41;"></div>
+                        <div class="colour" data-type="texture2" value="9" style="background-color:#815F41;"></div>
+                        <div class="colour" data-type="texture2" value="10" style="background-color:#9B8054;"></div>
+                        <div class="colour" data-type="texture2" value="11" style="background-color:#A78e66;"></div>
+                        <div class="colour" data-type="texture2" value="12" style="background-color:#AE9870;"></div>
+                        <div class="colour" data-type="texture2" value="13" style="background-color:#BA9C5A;"></div>
+                        <div class="colour" data-type="texture2" value="14" style="background-color:#CCB870;"></div>
+                        <div class="colour" data-type="texture2" value="15" style="background-color:#DEC086;"></div>
+                        <div class="colour" data-type="texture2" value="16" style="background-color:#A48054;"></div>
+                        <div class="colour" data-type="texture2" value="17" style="background-color:#96532D;"></div>
+                        <div class="colour" data-type="texture2" value="18" style="background-color:#852E15;"></div>
+                        <div class="colour" data-type="texture2" value="19" style="background-color:#921600;"></div>
+                        <div class="colour" data-type="texture2" value="20" style="background-color:#ae1d00;"></div>
+                        <div class="colour" data-type="texture2" value="21" style="background-color:#ac1e00;"></div>
+                        <div class="colour" data-type="texture2" value="22" style="background-color:#d53903;"></div>
+                        <div class="colour" data-type="texture2" value="23" style="background-color:#e15210;"></div>
+                        <div class="colour" data-type="texture2" value="24" style="background-color:#c6551f;"></div>
+                        <div class="colour" data-type="texture2" value="25" style="background-color:#d25619;"></div>
+                        <div class="colour" data-type="texture2" value="26" style="background-color:#615f5b;"></div>
+                        <div class="colour" data-type="texture2" value="27" style="background-color:#7f7f7d;"></div>
+                        <div class="colour" data-type="texture2" value="28" style="background-color:#a8a7a4;"></div>
+                        <div class="colour" data-type="texture2" value="29" style="background-color:#c5c2c0;"></div>
+                        <div class="colour" data-type="texture2" value="30" style="background-color:#4d3b51;"></div>
+                        <div class="colour" data-type="texture2" value="31" style="background-color:#6c435f;"></div>
+                        <div class="colour" data-type="texture2" value="32" style="background-color:#9a4569;"></div>
+                        <div class="colour" data-type="texture2" value="33" style="background-color:#ff88cc;"></div>
+                        <div class="colour" data-type="texture2" value="34" style="background-color:#ff5e74;"></div>
+                        <div class="colour" data-type="texture2" value="35" style="background-color:#ffa1a9;"></div>
+                        <div class="colour" data-type="texture2" value="36" style="background-color:#0087b3;"></div>
+                        <div class="colour" data-type="texture2" value="37" style="background-color:#00579a;"></div>
+                        <div class="colour" data-type="texture2" value="38" style="background-color:#003784;"></div>
+                        <div class="colour" data-type="texture2" value="39" style="background-color:#0c937d;"></div>
+                        <div class="colour" data-type="texture2" value="40" style="background-color:#006f6d;"></div>
+                        <div class="colour" data-type="texture2" value="41" style="background-color:#005460;"></div>
+                        <div class="colour" data-type="texture2" value="42" style="background-color:#9cb431;"></div>
+                        <div class="colour" data-type="texture2" value="43" style="background-color:#3b950a;"></div>
+                        <div class="colour" data-type="texture2" value="44" style="background-color:#058a20;"></div>
+                        <div class="colour" data-type="texture2" value="45" style="background-color:#dfb34c;"></div>
+                        <div class="colour" data-type="texture2" value="46" style="background-color:#e3ab00;"></div>
+                        <div class="colour" data-type="texture2" value="47" style="background-color:#f69100;"></div>
+                        <div class="colour" data-type="texture2" value="48" style="background-color:#ff8a16;"></div>
+                        <div class="colour" data-type="texture2" value="49" style="background-color:#ff893d;"></div>
+                        <div class="colour" data-type="texture2" value="50" style="background-color:#ff8f45;"></div>
+                        <div class="colour" data-type="texture2" value="51" style="background-color:#ff601c;"></div>
+                        <div class="colour" data-type="texture2" value="52" style="background-color:#ff3f02;"></div>
+                        <div class="colour" data-type="texture2" value="53" style="background-color:#fb1a00;"></div>
+                        <div class="colour" data-type="texture2" value="54" style="background-color:#c51100;"></div>
+                        <div class="colour" data-type="texture2" value="55" style="background-color:#201912;"></div>
+                        <div class="colour" data-type="texture2" value="56" style="background-color:#2b1f18;"></div>
+                        <div class="colour" data-type="texture2" value="57" style="background-color:#312219;"></div>
+                        <div class="colour" data-type="texture2" value="58" style="background-color:#362a1a;"></div>
+                        <div class="colour" data-type="texture2" value="59" style="background-color:#2e2012;"></div>
+                        <div class="colour" data-type="texture2" value="60" style="background-color:#231b11;"></div>
+                        <div class="colour" data-type="texture2" value="61" style="background-color:#070200;"></div>
+                        <div class="colour" data-type="texture2" value="62" style="background-color:#726a64;"></div>
+                        <div class="colour" data-type="texture2" value="63" style="background-color:#a37946;"></div>
+                    </div>
+                    <div class="rangevalue"><p>0</p></div>
+                    <input type="range" oninput="sliderselector(this)" class="sliderselector" data-type="opacity" min="0" max="100">
+                </div>
+                <div class="clothing-menu-option" data-type="makeup">
+                    <div class="clothing-menu-option-header"><p>Maquillaje</p></div>
+                    <div class="clothing-menu-option-item">
+                        <div class="clothing-menu-option-item-header" data-headertype="item-header"><p>Tipo</p></div>
+                        <div class="clothing-menu-option-item-left" data-type="item"><i class="fa fa-angle-left"></i></div> 
+                        <input type="number" class="item-number" data-type="item" value="0">
+                        <div class="clothing-menu-option-item-right" data-type="item"><i class="fa fa-angle-right"></i></div>
+                    </div>
+                    <!-- <div class="clothing-menu-option-item">
+                        <div class="clothing-menu-option-item-header" data-headertype="texture-header"><p>Color</p></div>
+                        <div class="clothing-menu-option-item-left" data-type="texture"><i class="fa fa-angle-left"></i></div>
+                        <input type="number" class="item-number" data-type="texture" value="0">
+                        <div class="clothing-menu-option-item-right" data-type="texture"><i class="fa fa-angle-right"></i></div>
+                    </div> -->
+                    <div class="colours">
+                        <div style="text-align: center; margin-bottom: 5px;"><p>Color</p></div>
+                        <div class="colour" data-type="texture" value="0" style="background-color:#1E1D1C;"></div>
+                        <div class="colour" data-type="texture" value="1" style="background-color:#272829;"></div>
+                        <div class="colour" data-type="texture" value="2" style="background-color:#2F2E2E;"></div>
+                        <div class="colour" data-type="texture" value="3" style="background-color:#36281C;"></div>
+                        <div class="colour" data-type="texture" value="4" style="background-color:#4C3120;"></div>
+                        <div class="colour" data-type="texture" value="5" style="background-color:#5D3629;"></div>
+                        <div class="colour" data-type="texture" value="6" style="background-color:#6A4A31;"></div>
+                        <div class="colour" data-type="texture" value="7" style="background-color:#735031;"></div>
+                        <div class="colour" data-type="texture" value="8" style="background-color:#815F41;"></div>
+                        <div class="colour" data-type="texture" value="9" style="background-color:#815F41;"></div>
+                        <div class="colour" data-type="texture" value="10" style="background-color:#9B8054;"></div>
+                        <div class="colour" data-type="texture" value="11" style="background-color:#A78e66;"></div>
+                        <div class="colour" data-type="texture" value="12" style="background-color:#AE9870;"></div>
+                        <div class="colour" data-type="texture" value="13" style="background-color:#BA9C5A;"></div>
+                        <div class="colour" data-type="texture" value="14" style="background-color:#CCB870;"></div>
+                        <div class="colour" data-type="texture" value="15" style="background-color:#DEC086;"></div>
+                        <div class="colour" data-type="texture" value="16" style="background-color:#A48054;"></div>
+                        <div class="colour" data-type="texture" value="17" style="background-color:#96532D;"></div>
+                        <div class="colour" data-type="texture" value="18" style="background-color:#852E15;"></div>
+                        <div class="colour" data-type="texture" value="19" style="background-color:#921600;"></div>
+                        <div class="colour" data-type="texture" value="20" style="background-color:#ae1d00;"></div>
+                        <div class="colour" data-type="texture" value="21" style="background-color:#ac1e00;"></div>
+                        <div class="colour" data-type="texture" value="22" style="background-color:#d53903;"></div>
+                        <div class="colour" data-type="texture" value="23" style="background-color:#e15210;"></div>
+                        <div class="colour" data-type="texture" value="24" style="background-color:#c6551f;"></div>
+                        <div class="colour" data-type="texture" value="25" style="background-color:#d25619;"></div>
+                        <div class="colour" data-type="texture" value="26" style="background-color:#615f5b;"></div>
+                        <div class="colour" data-type="texture" value="27" style="background-color:#7f7f7d;"></div>
+                        <div class="colour" data-type="texture" value="28" style="background-color:#a8a7a4;"></div>
+                        <div class="colour" data-type="texture" value="29" style="background-color:#c5c2c0;"></div>
+                        <div class="colour" data-type="texture" value="30" style="background-color:#4d3b51;"></div>
+                        <div class="colour" data-type="texture" value="31" style="background-color:#6c435f;"></div>
+                        <div class="colour" data-type="texture" value="32" style="background-color:#9a4569;"></div>
+                        <div class="colour" data-type="texture" value="33" style="background-color:#ff88cc;"></div>
+                        <div class="colour" data-type="texture" value="34" style="background-color:#ff5e74;"></div>
+                        <div class="colour" data-type="texture" value="35" style="background-color:#ffa1a9;"></div>
+                        <div class="colour" data-type="texture" value="36" style="background-color:#0087b3;"></div>
+                        <div class="colour" data-type="texture" value="37" style="background-color:#00579a;"></div>
+                        <div class="colour" data-type="texture" value="38" style="background-color:#003784;"></div>
+                        <div class="colour" data-type="texture" value="39" style="background-color:#0c937d;"></div>
+                        <div class="colour" data-type="texture" value="40" style="background-color:#006f6d;"></div>
+                        <div class="colour" data-type="texture" value="41" style="background-color:#005460;"></div>
+                        <div class="colour" data-type="texture" value="42" style="background-color:#9cb431;"></div>
+                        <div class="colour" data-type="texture" value="43" style="background-color:#3b950a;"></div>
+                        <div class="colour" data-type="texture" value="44" style="background-color:#058a20;"></div>
+                        <div class="colour" data-type="texture" value="45" style="background-color:#dfb34c;"></div>
+                        <div class="colour" data-type="texture" value="46" style="background-color:#e3ab00;"></div>
+                        <div class="colour" data-type="texture" value="47" style="background-color:#f69100;"></div>
+                        <div class="colour" data-type="texture" value="48" style="background-color:#ff8a16;"></div>
+                        <div class="colour" data-type="texture" value="49" style="background-color:#ff893d;"></div>
+                        <div class="colour" data-type="texture" value="50" style="background-color:#ff8f45;"></div>
+                        <div class="colour" data-type="texture" value="51" style="background-color:#ff601c;"></div>
+                        <div class="colour" data-type="texture" value="52" style="background-color:#ff3f02;"></div>
+                        <div class="colour" data-type="texture" value="53" style="background-color:#fb1a00;"></div>
+                        <div class="colour" data-type="texture" value="54" style="background-color:#c51100;"></div>
+                        <div class="colour" data-type="texture" value="55" style="background-color:#201912;"></div>
+                        <div class="colour" data-type="texture" value="56" style="background-color:#2b1f18;"></div>
+                        <div class="colour" data-type="texture" value="57" style="background-color:#312219;"></div>
+                        <div class="colour" data-type="texture" value="58" style="background-color:#362a1a;"></div>
+                        <div class="colour" data-type="texture" value="59" style="background-color:#2e2012;"></div>
+                        <div class="colour" data-type="texture" value="60" style="background-color:#231b11;"></div>
+                        <div class="colour" data-type="texture" value="61" style="background-color:#070200;"></div>
+                        <div class="colour" data-type="texture" value="62" style="background-color:#726a64;"></div>
+                        <div class="colour" data-type="texture" value="63" style="background-color:#a37946;"></div>
+                    </div>
+                    <div class="colours bottom">
+                        <div style="text-align: center; margin-bottom: 5px;"><p>Color secundario</p></div>
+                        <div class="colour" data-type="texture2" value="0" style="background-color:#1E1D1C;"></div>
+                        <div class="colour" data-type="texture2" value="1" style="background-color:#272829;"></div>
+                        <div class="colour" data-type="texture2" value="2" style="background-color:#2F2E2E;"></div>
+                        <div class="colour" data-type="texture2" value="3" style="background-color:#36281C;"></div>
+                        <div class="colour" data-type="texture2" value="4" style="background-color:#4C3120;"></div>
+                        <div class="colour" data-type="texture2" value="5" style="background-color:#5D3629;"></div>
+                        <div class="colour" data-type="texture2" value="6" style="background-color:#6A4A31;"></div>
+                        <div class="colour" data-type="texture2" value="7" style="background-color:#735031;"></div>
+                        <div class="colour" data-type="texture2" value="8" style="background-color:#815F41;"></div>
+                        <div class="colour" data-type="texture2" value="9" style="background-color:#815F41;"></div>
+                        <div class="colour" data-type="texture2" value="10" style="background-color:#9B8054;"></div>
+                        <div class="colour" data-type="texture2" value="11" style="background-color:#A78e66;"></div>
+                        <div class="colour" data-type="texture2" value="12" style="background-color:#AE9870;"></div>
+                        <div class="colour" data-type="texture2" value="13" style="background-color:#BA9C5A;"></div>
+                        <div class="colour" data-type="texture2" value="14" style="background-color:#CCB870;"></div>
+                        <div class="colour" data-type="texture2" value="15" style="background-color:#DEC086;"></div>
+                        <div class="colour" data-type="texture2" value="16" style="background-color:#A48054;"></div>
+                        <div class="colour" data-type="texture2" value="17" style="background-color:#96532D;"></div>
+                        <div class="colour" data-type="texture2" value="18" style="background-color:#852E15;"></div>
+                        <div class="colour" data-type="texture2" value="19" style="background-color:#921600;"></div>
+                        <div class="colour" data-type="texture2" value="20" style="background-color:#ae1d00;"></div>
+                        <div class="colour" data-type="texture2" value="21" style="background-color:#ac1e00;"></div>
+                        <div class="colour" data-type="texture2" value="22" style="background-color:#d53903;"></div>
+                        <div class="colour" data-type="texture2" value="23" style="background-color:#e15210;"></div>
+                        <div class="colour" data-type="texture2" value="24" style="background-color:#c6551f;"></div>
+                        <div class="colour" data-type="texture2" value="25" style="background-color:#d25619;"></div>
+                        <div class="colour" data-type="texture2" value="26" style="background-color:#615f5b;"></div>
+                        <div class="colour" data-type="texture2" value="27" style="background-color:#7f7f7d;"></div>
+                        <div class="colour" data-type="texture2" value="28" style="background-color:#a8a7a4;"></div>
+                        <div class="colour" data-type="texture2" value="29" style="background-color:#c5c2c0;"></div>
+                        <div class="colour" data-type="texture2" value="30" style="background-color:#4d3b51;"></div>
+                        <div class="colour" data-type="texture2" value="31" style="background-color:#6c435f;"></div>
+                        <div class="colour" data-type="texture2" value="32" style="background-color:#9a4569;"></div>
+                        <div class="colour" data-type="texture2" value="33" style="background-color:#ff88cc;"></div>
+                        <div class="colour" data-type="texture2" value="34" style="background-color:#ff5e74;"></div>
+                        <div class="colour" data-type="texture2" value="35" style="background-color:#ffa1a9;"></div>
+                        <div class="colour" data-type="texture2" value="36" style="background-color:#0087b3;"></div>
+                        <div class="colour" data-type="texture2" value="37" style="background-color:#00579a;"></div>
+                        <div class="colour" data-type="texture2" value="38" style="background-color:#003784;"></div>
+                        <div class="colour" data-type="texture2" value="39" style="background-color:#0c937d;"></div>
+                        <div class="colour" data-type="texture2" value="40" style="background-color:#006f6d;"></div>
+                        <div class="colour" data-type="texture2" value="41" style="background-color:#005460;"></div>
+                        <div class="colour" data-type="texture2" value="42" style="background-color:#9cb431;"></div>
+                        <div class="colour" data-type="texture2" value="43" style="background-color:#3b950a;"></div>
+                        <div class="colour" data-type="texture2" value="44" style="background-color:#058a20;"></div>
+                        <div class="colour" data-type="texture2" value="45" style="background-color:#dfb34c;"></div>
+                        <div class="colour" data-type="texture2" value="46" style="background-color:#e3ab00;"></div>
+                        <div class="colour" data-type="texture2" value="47" style="background-color:#f69100;"></div>
+                        <div class="colour" data-type="texture2" value="48" style="background-color:#ff8a16;"></div>
+                        <div class="colour" data-type="texture2" value="49" style="background-color:#ff893d;"></div>
+                        <div class="colour" data-type="texture2" value="50" style="background-color:#ff8f45;"></div>
+                        <div class="colour" data-type="texture2" value="51" style="background-color:#ff601c;"></div>
+                        <div class="colour" data-type="texture2" value="52" style="background-color:#ff3f02;"></div>
+                        <div class="colour" data-type="texture2" value="53" style="background-color:#fb1a00;"></div>
+                        <div class="colour" data-type="texture2" value="54" style="background-color:#c51100;"></div>
+                        <div class="colour" data-type="texture2" value="55" style="background-color:#201912;"></div>
+                        <div class="colour" data-type="texture2" value="56" style="background-color:#2b1f18;"></div>
+                        <div class="colour" data-type="texture2" value="57" style="background-color:#312219;"></div>
+                        <div class="colour" data-type="texture2" value="58" style="background-color:#362a1a;"></div>
+                        <div class="colour" data-type="texture2" value="59" style="background-color:#2e2012;"></div>
+                        <div class="colour" data-type="texture2" value="60" style="background-color:#231b11;"></div>
+                        <div class="colour" data-type="texture2" value="61" style="background-color:#070200;"></div>
+                        <div class="colour" data-type="texture2" value="62" style="background-color:#726a64;"></div>
+                        <div class="colour" data-type="texture2" value="63" style="background-color:#a37946;"></div>
+                    </div>
+                    <div class="rangevalue"><p>0</p></div>
+                    <input type="range" oninput="sliderselector(this)" class="sliderselector" data-type="opacity" min="0" max="100">
+                </div>
+            </div>
+
+            <div class="clothing-menu-accessoires-container">
+               <div class="flex">
+                <div class="clothing-menu-option" data-type="mask">
+                    <img src="https://i.imgur.com/MgZUlL6.png" class="icon">
+                    <div class="clothing-menu-option-header"><p>Máscaras</p></div>
+                    <div class="clothing-menu-option-item">
+                        <div class="clothing-menu-option-item-header" data-headertype="item-header"><p>Tipo</p></div>
+                        <div class="clothing-menu-option-item-left" data-type="item"><i class="fa fa-angle-left"></i></div> 
+                        <input type="number" class="item-number" data-type="item" value="0">
+                        <div class="clothing-menu-option-item-right" data-type="item"><i class="fa fa-angle-right"></i></div>
+                    </div>
+                    <div class="clothing-menu-option-item">
+                        <div class="clothing-menu-option-item-header" data-headertype="texture-header"><p>Textura</p></div>
+                        <div class="clothing-menu-option-item-left" data-type="texture"><i class="fa fa-angle-left"></i></div>
+                        <input type="number" class="item-number" data-type="texture" value="0">
+                        <div class="clothing-menu-option-item-right" data-type="texture"><i class="fa fa-angle-right"></i></div>
+                    </div>
+                </div>
+                <div class="clothing-menu-option" data-type="hat">
+                    <img src="https://i.imgur.com/1SKDyQb.png" class="icon">
+
+                    <div class="clothing-menu-option-header"><p>Sombreros</p></div>
+                    <div class="clothing-menu-option-item">
+                        <div class="clothing-menu-option-item-header" data-headertype="item-header"><p>Tipo</p></div>
+                        <div class="clothing-menu-option-item-left" data-type="item"><i class="fa fa-angle-left"></i></div> 
+                        <input type="number" class="item-number allow-negative" data-type="item" value="0">
+                        <div class="clothing-menu-option-item-right" data-type="item"><i class="fa fa-angle-right"></i></div>
+                    </div>
+                    <div class="clothing-menu-option-item">
+                        <div class="clothing-menu-option-item-header" data-headertype="texture-header"><p>Textura</p></div>
+                        <div class="clothing-menu-option-item-left" data-type="texture"><i class="fa fa-angle-left"></i></div>
+                        <input type="number" class="item-number" data-type="texture" value="0">
+                        <div class="clothing-menu-option-item-right" data-type="texture"><i class="fa fa-angle-right"></i></div>
+                    </div>
+                </div>
+                <div class="clothing-menu-option" data-type="glass">
+                    <img src="https://i.imgur.com/okNqZGb.png" class="icon">
+
+                    <div class="clothing-menu-option-header"><p>Gafas</p></div>
+                    <div class="clothing-menu-option-item">
+                        <div class="clothing-menu-option-item-header" data-headertype="item-header"><p>Tipo</p></div>
+                        <div class="clothing-menu-option-item-left" data-type="item"><i class="fa fa-angle-left"></i></div> 
+                        <input type="number" class="item-number" data-type="item" value="0">
+                        <div class="clothing-menu-option-item-right" data-type="item"><i class="fa fa-angle-right"></i></div>
+                    </div>
+                    <div class="clothing-menu-option-item">
+                        <div class="clothing-menu-option-item-header" data-headertype="texture-header"><p>Textura</p></div>
+                        <div class="clothing-menu-option-item-left" data-type="texture"><i class="fa fa-angle-left"></i></div>
+                        <input type="number" class="item-number" data-type="texture" value="0">
+                        <div class="clothing-menu-option-item-right" data-type="texture"><i class="fa fa-angle-right"></i></div>
+                    </div>
+                </div>
+                <div class="clothing-menu-option" data-type="ear">
+                    <img src="https://i.imgur.com/t11yyIP.png" class="icon">
+
+                    <div class="clothing-menu-option-header"><p>Accesorios de Oreja</p></div>
+                    <div class="clothing-menu-option-item">
+                        <div class="clothing-menu-option-item-header" data-headertype="item-header"><p>Tipo</p></div>
+                        <div class="clothing-menu-option-item-left" data-type="item"><i class="fa fa-angle-left"></i></div> 
+                        <input type="number" class="item-number allow-negative" data-type="item" value="0">
+                        <div class="clothing-menu-option-item-right" data-type="item"><i class="fa fa-angle-right"></i></div>
+                    </div>
+                    <div class="clothing-menu-option-item">
+                        <div class="clothing-menu-option-item-header" data-headertype="texture-header"><p>Textura</p></div>
+                        <div class="clothing-menu-option-item-left" data-type="texture"><i class="fa fa-angle-left"></i></div>
+                        <input type="number" class="item-number" data-type="texture" value="0">
+                        <div class="clothing-menu-option-item-right" data-type="texture"><i class="fa fa-angle-right"></i></div>
+                    </div>
+                </div>
+                <div class="clothing-menu-option" data-type="watch">
+                    <img src="https://i.imgur.com/pT9H6q6.png" class="icon">
+
+                    <div class="clothing-menu-option-header"><p>Relojes</p></div>
+                    <div class="clothing-menu-option-item">
+                        <div class="clothing-menu-option-item-header" data-headertype="item-header"><p>Tipo</p></div>
+                        <div class="clothing-menu-option-item-left" data-type="item"><i class="fa fa-angle-left"></i></div> 
+                        <input type="number" class="item-number allow-negative" data-type="item" value="0">
+                        <div class="clothing-menu-option-item-right" data-type="item"><i class="fa fa-angle-right"></i></div>
+                    </div>
+                    <div class="clothing-menu-option-item">
+                        <div class="clothing-menu-option-item-header" data-headertype="texture-header"><p>Textura</p></div>
+                        <div class="clothing-menu-option-item-left" data-type="texture"><i class="fa fa-angle-left"></i></div>
+                        <input type="number" class="item-number" data-type="texture" value="0">
+                        <div class="clothing-menu-option-item-right" data-type="texture"><i class="fa fa-angle-right"></i></div>
+                    </div>
+                </div>
+                <div class="clothing-menu-option" data-type="bracelet">
+                    <img src="https://i.imgur.com/mNsnn5o.png" class="icon">
+
+                    <div class="clothing-menu-option-header"><p>Brazaletes</p></div>
+                    <div class="clothing-menu-option-item">
+                        <div class="clothing-menu-option-item-header" data-headertype="item-header"><p>Tipo</p></div>
+                        <div class="clothing-menu-option-item-left" data-type="item"><i class="fa fa-angle-left"></i></div> 
+                        <input type="number" class="item-number allow-negative" data-type="item" value="0">
+                        <div class="clothing-menu-option-item-right" data-type="item"><i class="fa fa-angle-right"></i></div>
+                    </div>
+                    <div class="clothing-menu-option-item">
+                        <div class="clothing-menu-option-item-header" data-headertype="texture-header"><p>Textura</p></div>
+                        <div class="clothing-menu-option-item-left" data-type="texture"><i class="fa fa-angle-left"></i></div>
+                        <input type="number" class="item-number" data-type="texture" value="0">
+                        <div class="clothing-menu-option-item-right" data-type="texture"><i class="fa fa-angle-right"></i></div>
+                    </div>
+                </div>
+               </div>
+            </div>
+
+            <div class="clothing-menu-roomOutfits-container">
+
+            </div>
+
+            <div class="clothing-menu-myOutfits-container">
+
+            </div>
+
+
+            <div class="buttons-finish">
+                <div class="b-button" id="save-menu">
+                    <i class="lni lni-checkmark"></i> Confirmar
+                </div>
+                <div class="b-button outfit" id="save-outfit">
+                    <i class="lni lni-save"></i> Outfit
+                </div>
+                <div class="b-button" id="cancel-menu">
+                    <i class="lni lni-close"></i> Cancelar
+                </div>
+            </div>
+            
+
+        </div>
+        <div class="ayuda2">
+            <h1>ATENCIÓN</h1>
+            <div>
+                Si no logras ver correctamente a tu personaje, confirma el personaje tal cual, luego ve a los <b>Ajustes Gráficos</b> de GTA y aumenta el ajuste "<b>Extended Texture</b>".
+            </br>Después <b>reinicia</b> el juego y podrás crearlo correctamente.
+            </div>
+        </div>
+        <div class="clothing-menu-save-outfit-name">
+            <div class="clothing-menu-save-outfit-name-header"><p>Nombre Outfit</p></div>
+
+            <input type="text" id="outfit-name" placeholder="Outfit Name">
+
+            <div class="clothing-menu-save-outfit-name-buttons">
+                <div class="clothing-menu-save-outfit-name-button" id="save-outfit-save"><p>Confirmar</p></div>
+                <div class="clothing-menu-save-outfit-name-button" id="cancel-outfit-save"><p>Cancelar</p></div>
+            </div>
+        </div>
+       
+    </div>
+  
+</body>
+<script src="./script.js"></script>
+</html>
